@@ -4,6 +4,7 @@ var app = builder.Build();
 app.Run(async (HttpContext context) => { 
     context.Response.StatusCode = 200;
     context.Response.Headers["TempKey"] = "this is just a demo header";
+    context.Response.Headers["Server"] = "my server"; // the change in name wont change the Server - by def its KESTREL for ASP.NET Core
     context.Response.ContentType = "text/html";
     // text/plain, text/html, application/json, application/xml // these are the various content types you use
     // content length will be assigned by the kestrel server depending on the content-type
