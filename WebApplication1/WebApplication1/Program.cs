@@ -25,11 +25,17 @@ app.Run(async (HttpContext context) =>
     var response = context.Response;
 
     response.ContentType = "text/html";
-    if(request.Headers.ContainsKey("AuthorizationKey"))
-    {
-        var auth = request.Headers["AuthorizationKey"];
-        await response.WriteAsync($"<p>{auth}</p>");
-    }
+    //if(request.Headers.ContainsKey("AuthorizationKey"))
+    //{
+    //    var auth = request.Headers["AuthorizationKey"];
+    //    await response.WriteAsync($"<p>{auth}</p>");
+    //}
+
+    StreamReader reader = new StreamReader(request.Body);
+    String body = await reader.ReadToEndAsync();    // await converts a Task to String and returns it
+
+    await response.WriteAsync($"<h1>{body}</h1>");
+
 
 });
 
