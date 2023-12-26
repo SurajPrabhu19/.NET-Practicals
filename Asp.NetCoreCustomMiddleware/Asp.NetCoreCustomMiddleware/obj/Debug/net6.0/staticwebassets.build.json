@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EWj1AkPlNQTjRgzMy5JXoAvJUceFyVA22aDg8CNHYDo=",
+  "Source": "Asp.NetCoreCustomMiddleware",
+  "BasePath": "_content/Asp.NetCoreCustomMiddleware",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
