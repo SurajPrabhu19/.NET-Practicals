@@ -1,0 +1,31 @@
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\appsettings.Development.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\appsettings.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\Basic WebApp.staticwebassets.runtime.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\Basic WebApp.exe
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\Basic WebApp.deps.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\Basic WebApp.runtimeconfig.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\Basic WebApp.dll
+E:\.NET Practicals\Basic WebApp\Basic WebApp\bin\Debug\net6.0\Basic WebApp.pdb
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.AssemblyInfoInputs.cache
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.AssemblyInfo.cs
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.csproj.CoreCompileInputs.cache
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.MvcApplicationPartsAssemblyInfo.cache
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.RazorAssemblyInfo.cache
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.RazorAssemblyInfo.cs
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.sourcelink.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets.build.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets.development.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets\msbuild.Basic WebApp.Microsoft.AspNetCore.StaticWebAssets.props
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets\msbuild.build.Basic WebApp.props
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Basic WebApp.props
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Basic WebApp.props
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\staticwebassets.pack.json
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\scopedcss\bundle\Basic WebApp.styles.css
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\scopedcss\projectbundle\Basic WebApp.bundle.scp.css
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.dll
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\refint\Basic WebApp.dll
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.pdb
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\Basic WebApp.genruntimeconfig.cache
+E:\.NET Practicals\Basic WebApp\Basic WebApp\obj\Debug\net6.0\ref\Basic WebApp.dll
