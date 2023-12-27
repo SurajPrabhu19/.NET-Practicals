@@ -2,13 +2,13 @@
 
 namespace Routing_Concept.Controllers
 {
-    [Route("")]
     [Route("Home")]
     public class HomeController : Controller
     {
-        //https://localhost:7065/Home/
-        //https://localhost:7065/
+        // https://localhost:7065/Home/
+        // https://localhost:7065/
         [Route("")]
+        [Route("~/")]
         public IActionResult Index()
         {
             return View();
@@ -21,7 +21,6 @@ namespace Routing_Concept.Controllers
             return View();
         }
         
-
         // https://localhost:7065/Home/DisplayNumber/2
         [Route("DisplayNumber/{id}")]
         public int DisplayNumber(int? id)   // int? indicates that the value can be Nullable
