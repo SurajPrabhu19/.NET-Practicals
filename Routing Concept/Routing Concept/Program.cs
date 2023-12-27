@@ -7,10 +7,9 @@ builder.Services.AddControllersWithViews(); // adding this will make it suitable
 
 var app = builder.Build();
 
-//app.MapGet("/", () => "Hello World!");
+//app.MapGet("/", () => "Hello World!");      // callback function
 
-
-// CONVENTION based ROUTING: -------------------------------------------------------------------
+// CONVENTION based ROUTING: ------------------------------------------------------------------
 //app.MapDefaultControllerRoute();
 
 // https://localhost:7065/ -> will call https://localhost:7065/Home/Welcome as the default url
@@ -18,7 +17,11 @@ var app = builder.Build();
 //    name: "default",
 //    pattern: "{controller=Home}/{action=Welcome}/{id?}"
 //    );
-//------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------
 
+// ATTRIBUTE based ROUTING: -------------------------------------------------------------------
+app.MapControllers();
+
+//---------------------------------------------------------------------------------------------
 
 app.Run();
