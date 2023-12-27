@@ -13,7 +13,7 @@ namespace Routing_Concept.Controllers
         // https://localhost:7065/Home/DisplayNumber/2
         public int DisplayNumber(int? id)   // int? indicates that the value can be Nullable
         {
-            return id;
+            return id ?? 10;
         }
 
     }

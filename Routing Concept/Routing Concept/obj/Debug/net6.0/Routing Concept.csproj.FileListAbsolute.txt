@@ -30,25 +30,6 @@ E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\Routing
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\Routing Concept.runtimeconfig.json
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\Routing Concept.dll
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\Routing Concept.pdb
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.GeneratedMSBuildEditorConfig.editorconfig
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.AssemblyInfoInputs.cache
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.AssemblyInfo.cs
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.csproj.CoreCompileInputs.cache
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.MvcApplicationPartsAssemblyInfo.cache
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.sourcelink.json
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets.build.json
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets.development.json
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.Routing Concept.Microsoft.AspNetCore.StaticWebAssets.props
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.build.Routing Concept.props
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Routing Concept.props
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Routing Concept.props
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets.pack.json
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\scopedcss\bundle\Routing Concept.styles.css
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.dll
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\refint\Routing Concept.dll
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.pdb
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.genruntimeconfig.cache
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\ref\Routing Concept.dll
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\Humanizer.dll
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\MessagePack.dll
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\MessagePack.Annotations.dll
@@ -243,6 +224,25 @@ E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\runtime
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.csproj.AssemblyReference.cache
-E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.csproj.CopyComplete
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.GeneratedMSBuildEditorConfig.editorconfig
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.AssemblyInfoInputs.cache
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.AssemblyInfo.cs
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.csproj.CoreCompileInputs.cache
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.MvcApplicationPartsAssemblyInfo.cache
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.RazorAssemblyInfo.cache
 E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.RazorAssemblyInfo.cs
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.sourcelink.json
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets.build.json
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets.development.json
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.Routing Concept.Microsoft.AspNetCore.StaticWebAssets.props
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.build.Routing Concept.props
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Routing Concept.props
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Routing Concept.props
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\staticwebassets.pack.json
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\scopedcss\bundle\Routing Concept.styles.css
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.csproj.CopyComplete
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.dll
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\refint\Routing Concept.dll
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.pdb
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\Routing Concept.genruntimeconfig.cache
+E:\.net\.NET-Practicals\Routing Concept\Routing Concept\obj\Debug\net6.0\ref\Routing Concept.dll

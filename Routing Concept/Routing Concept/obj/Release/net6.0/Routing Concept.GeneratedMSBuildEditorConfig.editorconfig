@@ -25,3 +25,7 @@ build_metadata.AdditionalFiles.CssScope =
 [E:/.net/.NET-Practicals/Routing Concept/Routing Concept/Views/Home/Welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWxjb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/Routing Concept/Routing Concept/Views/User/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
