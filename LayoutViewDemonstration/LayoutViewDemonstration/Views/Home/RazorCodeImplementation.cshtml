@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "RazorCodeImplementation";
+}
+
+<h1>RazorCodeImplementation</h1>
+
+
+
+@{
+    var name = "Suraj Prabhu";
+    var age = 10;
+}
+
+<h1>@name</h1>
+<h1>@age</h1>
+<h1>@DateTime.Now</h1>
+<h1>@DateTime.UtcNow</h1>
+<h1>@DateTime.UtcNow.Year</h1>
+
+@{
+    <h2>This is for loop implementation</h2>
+    for (int i = 0; i < 10; i++)
+    {
+        <h3>@i</h3>
+    }
+}
