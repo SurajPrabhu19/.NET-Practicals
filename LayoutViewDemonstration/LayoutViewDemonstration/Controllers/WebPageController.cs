@@ -2,6 +2,7 @@
 
 namespace LayoutViewDemonstration.Controllers
 {
+    [Route("page/[action]")]
     public class WebPageController : Controller
     {
         public IActionResult Index()
