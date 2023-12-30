@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "login";
+    if (ViewData["UserRole"].ToString().ToLower().Equals("admin"))
+        Layout = "~/Views/Shared/_Dashboard.cshtml"; // overriding the layout in ViewStart.cshtml
+    else
+        Layout = "~/Views/Shared/_Dashboard.cshtml"; // currently having the same layout for simplicity - just for if else demonstration
+
+}
+
+<h1>login</h1>
+
