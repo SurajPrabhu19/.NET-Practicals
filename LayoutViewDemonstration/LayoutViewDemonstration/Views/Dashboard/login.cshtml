@@ -1,7 +1,10 @@
 ﻿
 @{
     ViewData["Title"] = "login";
-    if (ViewData["UserRole"].ToString().ToLower().Equals("admin"))
+
+    Layout = null; // Reset Layout Property to null
+
+    if (ViewData["UserRole"].ToString().ToLower().Equals("admin"))  // ALWAYS TYPE CAST THE ViewData[key]
         Layout = "~/Views/Shared/_Dashboard.cshtml"; // overriding the layout in ViewStart.cshtml
     else
         Layout = "~/Views/Shared/_Dashboard.cshtml"; // currently having the same layout for simplicity - just for if else demonstration
