@@ -13,7 +13,24 @@
 
 <h1>login</h1>
 
-<h3>@ViewBag.data1</h3>
-<h3>@ViewBag.data2</h3>
-<h3>@((List<String>)ViewData["arr"])</h3>   // using ViewBag as ViewData after type casting it manually
+<h3>ViewData and ViewBag Implemetation</h3>
+<p>@ViewBag.data1</p>
+<p>@ViewBag.data2</p>
+<p>@((List<String>)ViewData["arr"])</p>   // using ViewBag as ViewData after type casting it manually
+
+<h3>TempData Implementation:</h3>
+<h4>Msg: @TempData["Msg"]</h4>
+<p>@ViewData["Name"]</p>
+<p>@ViewData["LoginTime"]</p>
+
+
+
+@{
+    foreach (var item in (List<String>)TempData["NumArr"])
+    {
+        <p>@item</p>
+    }
+}
+
+
 

@@ -6,3 +6,19 @@
 
 <h1>Welcome to dashboard</h1>
 
+<h3>TempData Implementation:</h3>
+<h4>Msg: @TempData["Msg"]</h4>
+<p>@ViewData["Name"]</p>
+<p>@ViewData["LoginTime"]</p>
+
+@{
+    if ((List<String>) ViewData["TempArr"] !=null)
+    {
+        foreach (var item in (List<String>)ViewData["TempArr"])
+        {
+            <p>@item</p>
+        }
+    }
+}
+
+
