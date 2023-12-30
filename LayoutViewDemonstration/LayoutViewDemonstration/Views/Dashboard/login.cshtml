@@ -4,7 +4,7 @@
 
     Layout = null; // Reset Layout Property to null
 
-    if (ViewData["UserRole"].ToString().ToLower().Equals("admin"))  // ALWAYS TYPE CAST THE ViewData[key]
+    if (((string)ViewData["UserRole"]).ToLower().Equals("admin"))  // ALWAYS TYPE CAST THE ViewData[key]
         Layout = "~/Views/Shared/_Dashboard.cshtml"; // overriding the layout in ViewStart.cshtml
     else
         Layout = "~/Views/Shared/_Dashboard.cshtml"; // currently having the same layout for simplicity - just for if else demonstration
@@ -12,4 +12,8 @@
 }
 
 <h1>login</h1>
+
+<h3>@ViewBag.data1</h3>
+<h3>@ViewBag.data2</h3>
+<h3>@((List<String>)ViewData["arr"])</h3>   // using ViewBag as ViewData after type casting it manually
 

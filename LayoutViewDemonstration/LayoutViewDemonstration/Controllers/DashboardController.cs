@@ -17,6 +17,10 @@ namespace LayoutViewDemonstration.Controllers
                 ViewData["UserRole"] = role;
             else
                 ViewData["UserRole"] =  "regular";
+
+            ViewBag.data1 = "ViwwBag data 1";
+            ViewBag.data2 = "ViewBag data 2";
+            ViewBag.arr = new List<string>();
             
             return View();
         }
