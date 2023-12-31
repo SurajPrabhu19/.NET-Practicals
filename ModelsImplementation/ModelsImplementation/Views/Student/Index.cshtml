@@ -22,7 +22,17 @@
                 <td>@stud.name</td>
                 <td>@stud.email</td>
                 <td>@stud.age</td>
-    </tr>
-            }
+            </tr>
         }
+    }
 </table>
+@{
+    var studViewData = ViewData["StudentViewData"] as StudentModel; // require type casting
+    var studViewBag = ViewBag.StudentViewBag; // DOESNT require type casting
+    var studTempData = TempData["StudentTempData"];
+
+    <p>@studViewData</p>
+    <p>@studViewBag</p>
+    <p>@studTempData</p>
+
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ModelsImplementation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f95ba263ddba0dceaeb48ffb7b6269b340e132d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ModelsImplementation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ModelsImplementation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
