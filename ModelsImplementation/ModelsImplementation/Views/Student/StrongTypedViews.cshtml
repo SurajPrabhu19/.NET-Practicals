@@ -1,10 +1,10 @@
 ﻿@* Use Modelname or using full directory name below *@
 
 @* Strongly typed view - takes only StudentModel*@
-@* @model StudentModel *@
+@model StudentModel
 
 @* Strongly typed view - takes only List<StudentModel> OR IEnumerable<StudentModel>*@
-@model IEnumerable<StudentModel>
+@* @model IEnumerable<StudentModel> *@
 
 
 @{
@@ -13,6 +13,12 @@
 
 <h1>StrongTypedViews</h1>
 
+<p>@Model.id</p>
+<p>@Model.name</p>
+<p>@Model.email</p>
+<p>@Model.age</p>
+
+@* 
 <table>
     <tr>
         <th>id</th>
@@ -35,4 +41,4 @@
 
 
 </table>
-
+ *@

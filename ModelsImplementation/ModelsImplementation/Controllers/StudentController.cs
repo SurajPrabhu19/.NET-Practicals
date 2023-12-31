@@ -46,7 +46,7 @@ namespace ModelsImplementation.Controllers
                 new StudentModel{id=2, age=23, name="prabhu", email="p@gmail.com"},
                 new StudentModel{id=3, age=24, name="nitya", email="s@gmail.com"},
             };
-            return View(students);
+            return View(students[0]);
         }
     }
 }
