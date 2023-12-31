@@ -1,5 +1,4 @@
 ﻿
-
 @{
     ViewData["Title"] = "Index";
 }
@@ -15,7 +14,7 @@
     </tr>
 
         @{
-            foreach(var stud in (List<StudentModel>)ViewData["studs"])
+            foreach(var stud in (List<StudentModel>)ViewData["StudentViewBag"])
             {
     <tr>
                 <td>@stud.id</td>

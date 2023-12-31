@@ -1,7 +1,38 @@
-﻿@* @model  *@
+﻿@* Use Modelname or using full directory name below *@
+
+@* Strongly typed view - takes only StudentModel*@
+@* @model StudentModel *@
+
+@* Strongly typed view - takes only List<StudentModel> OR IEnumerable<StudentModel>*@
+@model IEnumerable<StudentModel>
+
+
 @{
     ViewData["Title"] = "StrongTypedViews";
 }
 
-<h1>StrongTypedViews</h1>!mo
+<h1>StrongTypedViews</h1>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>age</th>
+    </tr>
+
+    @{
+        foreach(var stud in Model)
+        {
+            <tr>
+                <td>@stud.id</td>
+                <td>@stud.name</td>
+                <td>@stud.email</td>
+                <td>@stud.age</td>
+            </tr>
+        }
+    }
+
+
+</table>
 

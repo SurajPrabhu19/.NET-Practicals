@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace ModelsImplementation.Controllers
 {
-    [Route("[controller]")]
+    //[Route("[controller]/")]
     public class StudentController : Controller
     {
         private readonly ILogger<StudentController> _logger;
@@ -16,7 +16,7 @@ namespace ModelsImplementation.Controllers
         public StudentController(ILogger<StudentController> logger, IStudentRepository studentRepository)
         {
             _logger = logger;
-            _studentRepository = studentRepository; // Controller based Dependency Injection
+            _studentRepository = studentRepository; // new StudentRepository(); // Controller based Dependency Injection
         }
 
         public IActionResult Index()
@@ -41,7 +41,12 @@ namespace ModelsImplementation.Controllers
         }
         public IActionResult StrongTypedViews()
         {
-            return View();
+            List<StudentModel> students = new List<StudentModel>() {
+                new StudentModel{id=1, age=23, name="suraj", email="s@gmail.com"},
+                new StudentModel{id=2, age=23, name="prabhu", email="p@gmail.com"},
+                new StudentModel{id=3, age=24, name="nitya", email="s@gmail.com"},
+            };
+            return View(students);
         }
     }
 }
