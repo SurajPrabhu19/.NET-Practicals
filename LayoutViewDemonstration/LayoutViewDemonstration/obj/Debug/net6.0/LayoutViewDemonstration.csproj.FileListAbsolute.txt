@@ -221,3 +221,5 @@ E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\obj\Debu
 E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\obj\Debug\net6.0\ref\LayoutViewDemonstration.dll
 E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\obj\Debug\net6.0\LayoutViewDemonstration.RazorAssemblyInfo.cache
 E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\obj\Debug\net6.0\LayoutViewDemonstration.RazorAssemblyInfo.cs
+E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\bin\Debug\net6.0\libman.json
+E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\bin\Debug\net6.0\LayoutViewDemonstration.staticwebassets.runtime.json

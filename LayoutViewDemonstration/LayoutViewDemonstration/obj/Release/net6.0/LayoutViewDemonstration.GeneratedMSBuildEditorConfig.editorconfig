@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LayoutViewDemonstration
+build_property.RootNamespace = LayoutViewDemonstration
+build_property.ProjectDir = E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\.net\.NET-Practicals\LayoutViewDemonstration\LayoutViewDemonstration
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Shared/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Dashboard/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Dashboard/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Home/RazorCodeImplementation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSYXpvckNvZGVJbXBsZW1lbnRhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Home/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Shared/_Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Shared/_Layout1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/WebPage/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViUGFnZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/WebPage/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViUGFnZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/WebPage/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViUGFnZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/WebPage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViUGFnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
