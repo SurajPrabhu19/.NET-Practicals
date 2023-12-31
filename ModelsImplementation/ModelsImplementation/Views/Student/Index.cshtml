@@ -1,0 +1,28 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </tr>
+
+        @{
+            foreach(var stud in (List<StudentModel>)ViewData["studs"])
+            {
+    <tr>
+                <td>@stud.id</td>
+                <td>@stud.name</td>
+                <td>@stud.email</td>
+                <td>@stud.age</td>
+    </tr>
+            }
+        }
+</table>
