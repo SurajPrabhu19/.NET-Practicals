@@ -1,7 +1,13 @@
+using ModelsImplementation.Repositories.Contracts;
+using ModelsImplementation.Repositories.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Dependency Injection:
+builder.Services.AddScoped<IStudentRepository, StudentRepository>(); // Add this line
 
 var app = builder.Build();
 
