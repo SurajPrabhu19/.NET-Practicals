@@ -27,8 +27,6 @@ namespace ModelsImplementation.Controllers
                 new StudentModel{id=3, age=24, name="nitya", email="s@gmail.com"},
             };
 
-           //ViewData["studs"] = students;
-
             // Passing Model data using ViewBag/Data & TempData
             ViewData["StudentViewData"] = students;
             ViewBag.StudentViewBag = students;
