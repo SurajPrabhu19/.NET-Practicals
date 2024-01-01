@@ -13,6 +13,7 @@ namespace ModelsImplementation.Controllers
             _logger = logger;
         }
 
+        [Route("")]
         public IActionResult Index()
         {
             return View();
