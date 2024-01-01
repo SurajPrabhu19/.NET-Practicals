@@ -19,6 +19,7 @@
                 <div class="col-sm-4">
                     <form method="post" asp-controller="Student" asp-action="Index">
                         <input class="form-control" placeholder="Enter your name" asp-for="name"/>
+                        <span asp-validation-for="name" style="color:red"></span>
                         <br />
                         <input type="submit" class="btn btn-outline-primary"/>
                     </form>
