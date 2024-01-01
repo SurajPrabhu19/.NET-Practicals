@@ -3,17 +3,20 @@ using ModelBindingAndValidation.Models;
 
 namespace ModelBindingAndValidation.Controllers
 {
+    [Route("[controller]/[action]")]
     public class StudentController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public string Index(StudentModel s)
+        public IActionResult Index(StudentModel s)
         {
-            return s+"";
+            ViewData["stud"] = s;
+            return View(s);
         }
     }
 }

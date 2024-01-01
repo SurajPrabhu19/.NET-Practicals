@@ -1,23 +1,33 @@
-﻿@model StudentModel;
+﻿@model StudentModel
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
+<h2>STUD Object: @ViewData["stud"]</h2>
+<h2>Model Object: @Model</h2>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <form method="post" asp-controller="Student" asp-action="Index">
-                <input class="form-control" placeholder="Enter your name" asp-for="name"/>
-                <br />
-                <input type="submit" class="btn btn-outline-primary"/>
-            </form>
+@{
+    if(Model!=null && Model.name!=null)
+    {
+        <h2>@Model.name</h2>
+    }
+    else
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form method="post" asp-controller="Student" asp-action="Index">
+                        <input class="form-control" placeholder="Enter your name" asp-for="name"/>
+                        <br />
+                        <input type="submit" class="btn btn-outline-primary"/>
+                    </form>
+                </div>
+            </div>
         </div>
-
-    </div>
-
-</div>
+    }
+}
+}
 
 
 
