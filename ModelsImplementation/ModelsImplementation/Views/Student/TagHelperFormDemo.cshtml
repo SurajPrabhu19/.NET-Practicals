@@ -1,0 +1,25 @@
+﻿@model StudentModel;
+@{
+    ViewData["Title"] = "TagHelperFormDemo";
+}
+
+<h1>TagHelperFormDemo</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form asp-controller="Student" asp-action="TagHelperFormDemo">
+                <input asp-for="name" class="form-control" placeholder="Enter your name"/>
+                <br />
+                <input asp-for="email" class="form-control" placeholder="Enter your email"/>
+                <br />
+                <input asp-for="age" class="form-control" placeholder="Enter your age"/>
+                <br />
+                <input type="submit" class="btn btn-outline-primary"/>
+            </form>
+
+
+        </div>
+
+    </div>
+</div>

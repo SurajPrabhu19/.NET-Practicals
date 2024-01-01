@@ -39,6 +39,10 @@ namespace ModelsImplementation.Controllers
         {
             return View();
         }
+        public IActionResult TagHelperFormDemo()
+        {
+            return View();
+        }
         public IActionResult StrongTypedViews()
         {
             List<StudentModel> students = new List<StudentModel>() {
