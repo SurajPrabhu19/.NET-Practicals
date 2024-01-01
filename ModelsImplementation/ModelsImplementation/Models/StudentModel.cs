@@ -6,7 +6,15 @@
         public string name { get; set; }
         public string email { get; set; }
         public int age { get; set; }
+        public Gender gender { get; set; }
+        public string isMarried { get; set; }
+        public string description { get; set; }
 
         public StudentModel() { }
+
+    }
+    public enum Gender
+    {
+        MALE, FEMALE,
     }
 }

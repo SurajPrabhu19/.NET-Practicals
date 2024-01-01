@@ -9,11 +9,39 @@
     <div class="row">
         <div class="col-sm-4">
             <form asp-controller="Student" asp-action="TagHelperFormDemo">
+                <lable asp-for="name">Enter name:</lable>
                 <input asp-for="name" class="form-control" placeholder="Enter your name"/>
                 <br />
                 <input asp-for="email" class="form-control" placeholder="Enter your email"/>
                 <br />
                 <input asp-for="age" class="form-control" placeholder="Enter your age"/>
+                <br />
+                <select class="form-control" asp-for="gender" asp-items="Html.GetEnumSelectList<Gender>()">
+                    <option value="">Select Gender</option>
+                </select>
+                <br />
+                <label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="isMarried" value="Yes">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="isMarried" value="No">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            No
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="isMarried" value="NA" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Dont reveal
+                        </label>
+                    </div>
+                </label>
+                <br />
+                <textarea asp-for="description" placeholder="Description">Enter your details:</textarea>
                 <br />
                 <input type="submit" class="btn btn-outline-primary"/>
             </form>
