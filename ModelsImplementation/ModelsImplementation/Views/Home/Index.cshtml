@@ -6,3 +6,14 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<a href="Home/Contact">Contact Page 1</a>
+<br />
+<a href="@Url.Action("Privacy", "Home")">Privacy Page 1</a>      @* MVC 5 *@
+<br />
+@Html.ActionLink("About Page 1", "About", "Home")       @* MVC 5 *@
+<br />
+@* asp-route-_ARG_NAME_ - Here you have to pass the exact same name of the arg mentioned in the function, else it wont push it as i/p to the function *@
+<a asp-action="Display" asp-controller="Home" asp-route-val="Val">Display Val</a>
+<br /> 
+<a asp-action="Display" asp-controller="Home" asp-route-str="Str">Display Str</a>
