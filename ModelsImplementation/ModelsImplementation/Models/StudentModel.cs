@@ -1,8 +1,12 @@
-﻿namespace ModelsImplementation.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ModelsImplementation.Models
 {
     public class StudentModel
     {
         public int id { get; set; }
+
+        [Required]
         public string name { get; set; }
         public string email { get; set; }
         public int age { get; set; }

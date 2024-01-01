@@ -39,9 +39,20 @@ namespace ModelsImplementation.Controllers
         {
             return View();
         }
+
         public IActionResult TagHelperFormDemo()
         {
             return View();
+        }
+        public IActionResult TagHelperFormOuputDemo()
+        {
+            return View();
+        }
+        [HttpPost]
+        public string TagHelperFormOutputDemo(StudentModel s)
+        {
+            ViewBag.stud = s;
+            return s+"";
         }
         public IActionResult StrongTypedViews()
         {
