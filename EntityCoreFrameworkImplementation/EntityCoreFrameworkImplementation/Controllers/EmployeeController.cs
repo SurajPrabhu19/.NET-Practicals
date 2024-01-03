@@ -1,0 +1,39 @@
+﻿using EntityCoreFrameworkImplementation.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EntityCoreFrameworkImplementation.Controllers
+{
+    [Route("[controller]/[action]")]
+    public class EmployeeController : Controller
+    {
+        private readonly EmployeeModelDbContext employeeModelDbContext;
+
+        public EmployeeController(EmployeeModelDbContext employeeModelDbContext)
+        {
+            this.employeeModelDbContext = employeeModelDbContext;
+        }
+        public IActionResult Index()
+        {
+            var employees = employeeModelDbContext.Employee.ToList();
+            return View(employees);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create(EmployeeModel emp)
+        {
+            if(ModelState.IsValid)
+            {
+                employeeModelDbContext.Employee.Add(emp);
+                await employeeModelDbContext.SaveChangesAsync();
+                return RedirectToAction(controllerName: "Employee", actionName:"Index");
+            }
+            return View(emp);
+        }
+
+    }
+}

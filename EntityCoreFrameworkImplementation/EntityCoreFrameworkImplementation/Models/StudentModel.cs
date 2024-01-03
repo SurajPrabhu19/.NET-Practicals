@@ -8,11 +8,13 @@ namespace EntityCoreFrameworkImplementation.Models
     {
         [Key]
         public int id { get; set; }
+
         [Column("studentname", TypeName = "varchar(100)")]
         public string name { get; set; }
-        public int age { get; set; }
 
         [Column("studentname", TypeName = "varchar(100)")]
         public string gender { get; set; }
+
+        public int age { get; set; }
     }
 }

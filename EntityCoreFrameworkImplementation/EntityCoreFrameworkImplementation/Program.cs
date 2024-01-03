@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 var provider = builder.Services.BuildServiceProvider();     
 var config = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<StudentDbContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
+builder.Services.AddDbContext<EmployeeModelDbContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
 var app = builder.Build();
 

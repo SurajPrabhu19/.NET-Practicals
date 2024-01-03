@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace EntityCoreFrameworkImplementation.Migrations
+namespace EntityCoreFrameworkImplementation.Migrations.EmployeeModelDb
 {
-    [DbContext(typeof(StudentDbContext))]
-    partial class StudentDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(EmployeeModelDbContext))]
+    partial class EmployeeModelDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,32 +21,30 @@ namespace EntityCoreFrameworkImplementation.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("EntityCoreFrameworkImplementation.Models.StudentModel", b =>
+            modelBuilder.Entity("EntityCoreFrameworkImplementation.Models.EmployeeModel", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("age")
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("EmpEmail");
+
+                    b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<string>("gender")
+                    b.Property<string>("Name")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("varchar(100)")
-                        .HasColumnName("studentname");
+                        .HasColumnName("EmpName");
 
-                    b.Property<string>("name")
-                        .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("varchar(100)")
-                        .HasColumnName("studentname");
+                    b.HasKey("Id");
 
-                    b.HasKey("id");
-
-                    b.ToTable("Student", (string)null);
+                    b.ToTable("Employee");
                 });
 #pragma warning restore 612, 618
         }

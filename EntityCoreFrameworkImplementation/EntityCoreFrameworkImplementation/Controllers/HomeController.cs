@@ -17,6 +17,12 @@ namespace EntityCoreFrameworkImplementation.Controllers
 
         public IActionResult Index()
         {
+            var studList = _studentDbContext.Student.ToList<StudentModel>();
+            return View(studList);
+        }
+        public IActionResult Create()
+        {
+            ////var studList = _studentDbContext.Student.ToList<StudentModel>();
             return View();
         }
 
