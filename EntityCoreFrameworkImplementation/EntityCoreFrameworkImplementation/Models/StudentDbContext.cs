@@ -4,11 +4,14 @@ namespace EntityCoreFrameworkImplementation.Models
 {
     public class StudentDbContext: DbContext
     {
-        public StudentDbContext(DbContextOptions options): base(options)
+        public StudentDbContext()
+        {
+            
+        }public StudentDbContext(DbContextOptions options): base(options)
         {
             
         }
 
-        public DbSet<StudentDbContext> Student { get; set; }    // Represents table of the database
+        public DbSet<StudentModel> Student { get; set; }    // Represents table of the database
     }
 }
