@@ -7,10 +7,12 @@ namespace EntityCoreFrameworkImplementation.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly StudentDbContext _studentDbContext;    // adding dbcontext using ctor dependency injection
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, StudentDbContext studentDbContext)
         {
             _logger = logger;
+            _studentDbContext = studentDbContext;
         }
 
         public IActionResult Index()

@@ -4,10 +4,7 @@ namespace EntityCoreFrameworkImplementation.Models
 {
     public class StudentDbContext: DbContext
     {
-        public StudentDbContext()
-        {
-            
-        }public StudentDbContext(DbContextOptions options): base(options)
+        public StudentDbContext(DbContextOptions options): base(options)
         {
             
         }
