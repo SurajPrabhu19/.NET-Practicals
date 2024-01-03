@@ -1,7 +1,15 @@
+using EntityCoreFrameworkImplementation.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// create and register services for StudentDbContext:
+var provider = builder.Services.BuildServiceProvider();     
+var config = provider.GetRequiredService<IConfiguration>();
+builder.Services.AddDbContext<StudentDbContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
 var app = builder.Build();
 
