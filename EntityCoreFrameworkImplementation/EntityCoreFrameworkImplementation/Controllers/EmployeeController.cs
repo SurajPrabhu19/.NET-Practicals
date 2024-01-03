@@ -1,5 +1,6 @@
 ﻿using EntityCoreFrameworkImplementation.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntityCoreFrameworkImplementation.Controllers
 {
@@ -32,7 +33,16 @@ namespace EntityCoreFrameworkImplementation.Controllers
                 await employeeModelDbContext.SaveChangesAsync();
                 return RedirectToAction(controllerName: "Employee", actionName:"Index");
             }
+
             return View(emp);
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> Details()
+        {
+            var employee = await employeeModelDbContext.Employee.FirstOrDefaultAsync<EmployeeModel>();
+
+            return View(employee);
         }
 
     }
