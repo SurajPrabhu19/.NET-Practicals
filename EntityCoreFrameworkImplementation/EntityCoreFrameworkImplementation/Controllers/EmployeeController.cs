@@ -46,7 +46,7 @@ namespace EntityCoreFrameworkImplementation.Controllers
             return View(employee);
         }
 
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit(int? id)
         {
 
             if (id == null || employeeModelDbContext.Employee == null)
