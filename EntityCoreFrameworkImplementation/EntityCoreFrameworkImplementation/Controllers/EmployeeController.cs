@@ -44,6 +44,13 @@ namespace EntityCoreFrameworkImplementation.Controllers
 
             return View(employee);
         }
+        
+        public async Task<IActionResult> Edit(int id)
+        {
+            
+            var employee = await employeeModelDbContext.Employee.FindAsync(id);
 
+            return View(employee);
+        }
     }
 }
