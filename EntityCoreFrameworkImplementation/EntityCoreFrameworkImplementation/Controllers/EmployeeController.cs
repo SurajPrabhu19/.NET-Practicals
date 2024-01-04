@@ -1,6 +1,7 @@
 ﻿using EntityCoreFrameworkImplementation.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Numerics;
 
 namespace EntityCoreFrameworkImplementation.Controllers
 {
@@ -44,10 +45,12 @@ namespace EntityCoreFrameworkImplementation.Controllers
 
             return View(employee);
         }
-        
+
         public async Task<IActionResult> Edit(int id)
         {
-            
+
+            if (id == null || employeeModelDbContext.Employee == null)
+                return NotFound();
             var employee = await employeeModelDbContext.Employee.FindAsync(id);
 
             return View(employee);
