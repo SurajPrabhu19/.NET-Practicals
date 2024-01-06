@@ -63,19 +63,17 @@ namespace EntityCoreFrameworkImplementation.Controllers
         public async Task<IActionResult> Edit(int? id, EmployeeModel employee)
         {
 
+            if (id != employee.Id) return NotFound();
+
             if (ModelState.IsValid)
             {
-                employeeModelDbContext.Employee.Update(employee);
+                employeeModelDbContext.Update(employee);
                 await employeeModelDbContext.SaveChangesAsync();
                 return RedirectToAction(controllerName: "Employee", actionName: "Index");
             }
             return View(employee);
         }
 
-        //public IActionResult Delete(int? id)
-        //{
-
-        //}
 
     }
 }
