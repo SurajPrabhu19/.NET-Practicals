@@ -1,7 +1,14 @@
+using DBFirst_EntityFramework.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var provider = builder.Services.BuildServiceProvider();
+var config = provider.GetRequiredService<IConfiguration>();
+builder.Services.AddDbContext<ProgramentorDbFirstContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
 var app = builder.Build();
 
