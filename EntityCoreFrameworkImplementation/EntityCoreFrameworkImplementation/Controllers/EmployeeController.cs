@@ -28,16 +28,16 @@ namespace EntityCoreFrameworkImplementation.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(EmployeeModel emp)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 employeeModelDbContext.Employee.Add(emp);
                 await employeeModelDbContext.SaveChangesAsync();
-                return RedirectToAction(controllerName: "Employee", actionName:"Index");
+                return RedirectToAction(controllerName: "Employee", actionName: "Index");
             }
 
             return View(emp);
         }
-        
+
         [HttpGet]
         public async Task<IActionResult> Details()
         {
@@ -46,6 +46,7 @@ namespace EntityCoreFrameworkImplementation.Controllers
             return View(employee);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
 
@@ -57,5 +58,24 @@ namespace EntityCoreFrameworkImplementation.Controllers
 
             return View(employee);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int? id, EmployeeModel employee)
+        {
+
+            if (ModelState.IsValid)
+            {
+                employeeModelDbContext.Employee.Update(employee);
+                await employeeModelDbContext.SaveChangesAsync();
+                return RedirectToAction(controllerName: "Employee", actionName: "Index");
+            }
+            return View(employee);
+        }
+
+        //public IActionResult Delete(int? id)
+        //{
+
+        //}
+
     }
 }
