@@ -26,6 +26,7 @@ namespace EntityCoreFrameworkImplementation.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]  // prevent CSRF attack
         public async Task<IActionResult> Create(EmployeeModel emp)
         {
             if (emp == null) return NotFound();
@@ -65,6 +66,7 @@ namespace EntityCoreFrameworkImplementation.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]  // prevent CSRF attack
         public async Task<IActionResult> Edit(int? id, EmployeeModel employee)
         {
             if (id != employee.Id) return NotFound();
@@ -94,6 +96,7 @@ namespace EntityCoreFrameworkImplementation.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]  // prevent CSRF attack
         public async Task<IActionResult> DeleteConfirmed(int? id)
         {
             var employee = employeeModelDbContext.Employee.FirstOrDefault(emp => emp.Id == id);
