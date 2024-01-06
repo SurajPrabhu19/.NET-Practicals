@@ -53,6 +53,8 @@ namespace EntityCoreFrameworkImplementation.Controllers
                 return NotFound();
             var employee = await employeeModelDbContext.Employee.FindAsync(id);
 
+            if (employee == null) return NotFound();
+
             return View(employee);
         }
     }
