@@ -10,7 +10,12 @@ var provider = builder.Services.BuildServiceProvider();
 var config = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<ProgramentorDbFirstContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
-builder.Services.AddSession();  // Adding feature to use Session.
+builder.Services.AddSession(
+    options =>
+    {
+        options.IdleTimeout = TimeSpan.FromSeconds(10);
+    }
+    );  // Adding feature to use Session.
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // adding service of <IHttpContextAccessor>
 
 var app = builder.Build();
