@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DBFirst_EntityFramework.Controllers
 {
+    [Route("[controller]/[action]")]
     public class EmployeeController : Controller
     {
         private readonly ProgramentorDbFirstContext _dbContext;
@@ -15,7 +16,7 @@ namespace DBFirst_EntityFramework.Controllers
         {
             HttpContext.Session.SetString("username", "Suraj Prabhu");
             HttpContext.Session.SetString("password", "12345");
-            return View();
+            return RedirectToAction("List", "Employee");
         }
 
         [HttpGet]
@@ -24,9 +25,17 @@ namespace DBFirst_EntityFramework.Controllers
             var employees = _dbContext.Employees.ToList();
             return View(employees);
         }
-        public IActionResult Details()
+        public async Task<IActionResult> Details(int? id)
         {
-            return View();
+            if (id == null || _dbContext.Employees == null)
+                return NotFound();
+
+            var employee = await _dbContext.Employees.FirstOrDefaultAsync(emp => emp.Id == id);
+
+            if (employee == null)
+                return NotFound();
+
+            return View(employee);
         }
     }
 }
