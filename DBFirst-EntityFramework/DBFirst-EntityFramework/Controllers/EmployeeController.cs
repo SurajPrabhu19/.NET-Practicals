@@ -13,6 +13,8 @@ namespace DBFirst_EntityFramework.Controllers
         }
         public IActionResult Index()
         {
+            HttpContext.Session.SetString("username", "Suraj Prabhu");
+            HttpContext.Session.SetString("password", "12345");
             return View();
         }
 
@@ -21,6 +23,10 @@ namespace DBFirst_EntityFramework.Controllers
         {
             var employees = _dbContext.Employees.ToList();
             return View(employees);
+        }
+        public IActionResult Details()
+        {
+            return View();
         }
     }
 }
