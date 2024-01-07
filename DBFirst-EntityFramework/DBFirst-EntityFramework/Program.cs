@@ -3,14 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddSession();  // Adding feature to use Session.
+builder.Services.AddControllersWithViews(); // Add services to the container.
 
+// Registering DbContext Service for ProgrammentorDbFirst database
 var provider = builder.Services.BuildServiceProvider();
 var config = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<ProgramentorDbFirstContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
 var app = builder.Build();
+
+app.UseSession(); // middle-ware to use Sesssions
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
