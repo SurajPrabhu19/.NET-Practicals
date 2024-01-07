@@ -5,8 +5,8 @@
 @{
     ViewData["Title"] = "Details";
 }
-<h3>Hii @accessor.HttpContext.Session.GetString("username")</h3>
-<h3>Hii @accessor.HttpContext.Session.GetString("password")</h3>
+<h3>Username: @accessor.HttpContext.Session.GetString("username")</h3>
+<h3>Email: @accessor.HttpContext.Session.GetString("email")</h3>
 <h3></h3>
 <h1>Details</h1>
 
