@@ -25,3 +25,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+// Run this for generating Models and DbContext: Scaffold-DbContext "server=LAPTOP-928V0DCI; database=ProgramentorDbFirst; trusted_connection=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+// Force update the Models and DbContext: Scaffold-DbContext "server=LAPTOP-928V0DCI; database=ProgramentorDbFirst; trusted_connection=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
