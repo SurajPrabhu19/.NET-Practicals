@@ -39,7 +39,8 @@ namespace SessionInNetCore.Controllers
 
         public IActionResult Logout()
         {
-            return View();
+            HttpContext.Session.Remove("email");
+            return RedirectToAction("Login");
         }
         public IActionResult Dashboard()
         {
