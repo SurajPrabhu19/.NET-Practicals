@@ -12,7 +12,10 @@ var config = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<ProgramentorDbFirstContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
 // Adding Session Service:
-builder.Services.AddSession();
+builder.Services.AddSession(session =>
+{
+    session.IdleTimeout = TimeSpan.FromSeconds(30); // Setting Session timeout to 30 sec
+});
 
 var app = builder.Build();
 
