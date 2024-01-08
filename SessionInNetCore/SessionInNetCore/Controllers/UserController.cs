@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SessionInNetCore.Models;
 
 namespace SessionInNetCore.Controllers
@@ -17,6 +18,7 @@ namespace SessionInNetCore.Controllers
         }
         public IActionResult Index()
         {
+           
             //return View();
             return RedirectToAction("Dashboard");
         }
@@ -45,13 +47,20 @@ namespace SessionInNetCore.Controllers
         [HttpGet]
         public IActionResult SignUp()
         {
+            List<SelectListItem> gender = new()
+            {
+                new SelectListItem{Value="Male", Text="Male"},
+                new SelectListItem{Value="Female", Text="Female"},
+            };
+            ViewBag.Gender = gender;
             return View();
         }
 
         [HttpPost]  
         public IActionResult SignUp(User user)
         {
-            if(ModelState.IsValid)
+            
+            if (ModelState.IsValid)
             {
                 dbContext.Users.AddAsync(user);
                 dbContext.SaveChangesAsync();
