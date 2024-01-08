@@ -11,8 +11,14 @@ var provider = builder.Services.BuildServiceProvider();
 var config = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<ProgramentorDbFirstContext>(item => item.UseSqlServer(config.GetConnectionString("dbconn")));
 
+// Adding Session Service:
+builder.Services.AddSession();
 
 var app = builder.Build();
+
+// Middleware to use Sessions:
+app.UseSession();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
