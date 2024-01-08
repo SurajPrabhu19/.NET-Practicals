@@ -37,6 +37,25 @@ namespace SessionInNetCore.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
+        [HttpPost]  
+        public IActionResult SignUp(User user)
+        {
+            if(ModelState.IsValid)
+            {
+                dbContext.Users.AddAsync(user);
+                dbContext.SaveChangesAsync();
+                TempData["Register"] = "Registered Successfully";
+                return RedirectToAction("Login");
+            }
+            return View();
+        }
+
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("email");
