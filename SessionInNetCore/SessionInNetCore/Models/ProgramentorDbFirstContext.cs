@@ -72,19 +72,17 @@ namespace SessionInNetCore.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("User");
-
-                entity.Property(e => e.Email)
-                    .HasMaxLength(100)
-                    .IsUnicode(false)
-                    .HasColumnName("email");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Name)
+                entity.Property(e => e.Email)
                     .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("email");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("name");
 
