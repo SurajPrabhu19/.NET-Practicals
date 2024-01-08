@@ -40,9 +40,13 @@
             @*<label class="form-label">Select Gender: </label>
             @Html.DropDownList("Gender", Html.GetEnumSelectList<Gender>(), "Select Gender", new { @class = "form-control" })
             <br /> *@
-            <label class="form-label">Select Gender: </label>
+            @* <label class="form-label">Select Gender: </label>
             @Html.DropDownList("Gender", ViewBag.Gender, "Select Gender", new { @class = "form-control" })
-            <br />
+            <br /> *@
+            <label class="form-label">Select Gender: </label>
+            <select class="form-control" asp-for="Gender" asp-items=@ViewBag.Gender> 
+                <option value="">Select Gender</option>
+            </select>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
