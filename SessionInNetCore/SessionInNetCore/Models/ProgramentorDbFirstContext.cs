@@ -81,6 +81,11 @@ namespace SessionInNetCore.Models
                     .IsUnicode(false)
                     .HasColumnName("email");
 
+                entity.Property(e => e.Gender)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("gender");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(100)
                     .IsUnicode(false)
