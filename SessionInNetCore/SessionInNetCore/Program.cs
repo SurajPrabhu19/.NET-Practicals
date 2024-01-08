@@ -17,6 +17,9 @@ builder.Services.AddSession(session =>
     session.IdleTimeout = TimeSpan.FromSeconds(30); // Setting Session timeout to 30 sec
 });
 
+// adding service - IHttpContextAccessor for using Sessions in Views (.cshtml)
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 var app = builder.Build();
 
 // Middleware to use Sessions:
