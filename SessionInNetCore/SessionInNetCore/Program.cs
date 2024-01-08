@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ProgramentorDbFirstContext>(item => item.UseSqlSer
 // Adding Session Service:
 builder.Services.AddSession(session =>
 {
-    session.IdleTimeout = TimeSpan.FromSeconds(30); // Setting Session timeout to 30 sec
+    session.IdleTimeout = TimeSpan.FromSeconds(10); // Setting Session timeout to 10 sec
 });
 
 // adding service - IHttpContextAccessor for using Sessions in Views (.cshtml)

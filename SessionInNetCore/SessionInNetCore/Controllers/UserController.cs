@@ -18,6 +18,10 @@ namespace SessionInNetCore.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            if (HttpContext.Session.GetString("email") != null)
+            {
+                return RedirectToAction("Dashboard");
+            }
             return View();
         }
         [HttpPost]
@@ -39,7 +43,12 @@ namespace SessionInNetCore.Controllers
         }
         public IActionResult Dashboard()
         {
-            return View();
+            if (HttpContext.Session.GetString("email") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            var users = dbContext.Users.ToList();
+            return View(users);
         }
 
     }
