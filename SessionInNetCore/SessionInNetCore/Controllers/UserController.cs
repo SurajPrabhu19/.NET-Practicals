@@ -3,6 +3,11 @@ using SessionInNetCore.Models;
 
 namespace SessionInNetCore.Controllers
 {
+    public enum Gender
+    {
+        Male,
+        Female,
+    }
     public class UserController : Controller
     {
         private readonly ProgramentorDbFirstContext dbContext;

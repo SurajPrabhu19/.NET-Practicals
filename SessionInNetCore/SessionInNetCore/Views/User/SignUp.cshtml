@@ -1,5 +1,5 @@
 ﻿@model SessionInNetCore.Models.User
-
+@using SessionInNetCore.Controllers
 @{
     ViewData["Title"] = "SignUp";
 }
@@ -37,6 +37,9 @@
                 <input asp-for="Gender" class="form-control" />
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
+            <label class="form-label">Select Gender: </label>
+            @Html.DropDownList("Gender", Html.GetEnumSelectList<Gender>(), "Select Gender", new {@class = "form-control"})
+                <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
