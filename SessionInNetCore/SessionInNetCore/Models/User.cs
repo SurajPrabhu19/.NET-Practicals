@@ -14,6 +14,7 @@ namespace SessionInNetCore.Models
         [Required]
         [DataType(DataType.Password)] 
         public string Password { get; set; } = null!;
+        [Required]
         public string? Gender { get; set; }
 
     }
