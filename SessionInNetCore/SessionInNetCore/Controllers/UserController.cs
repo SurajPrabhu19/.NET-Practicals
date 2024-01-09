@@ -9,6 +9,7 @@ namespace SessionInNetCore.Controllers
         Male,
         Female,
     }
+    [Route("[controller]/[action]")]
     public class UserController : Controller
     {
         private readonly ProgramentorDbFirstContext dbContext;
@@ -18,7 +19,7 @@ namespace SessionInNetCore.Controllers
         }
         public IActionResult Index()
         {
-           
+
             //return View();
             return RedirectToAction("Dashboard");
         }
@@ -56,18 +57,18 @@ namespace SessionInNetCore.Controllers
             return View();
         }
 
-        [HttpPost]  
-        public IActionResult SignUp(User user)
+        [HttpPost]
+        public async Task<IActionResult> SignUp(User user)
         {
-            
+
             if (ModelState.IsValid)
             {
-                dbContext.Users.AddAsync(user);
-                dbContext.SaveChangesAsync();
+                await dbContext.Users.AddAsync(user);
+                await dbContext.SaveChangesAsync();
                 TempData["Register"] = "Registered Successfully";
-                return RedirectToAction("Login");
             }
-            return View();
+            return RedirectToAction("Login");
+            //return View();
         }
 
         public IActionResult Logout()
@@ -77,10 +78,13 @@ namespace SessionInNetCore.Controllers
         }
         public IActionResult Dashboard()
         {
-            if (HttpContext.Session.GetString("email") == null)
-            {
-                return RedirectToAction("Login");
-            }
+            //if (HttpContext.Session.GetString("email") == null)
+            //{
+            //    return RedirectToAction("Login");
+            //}            //if (HttpContext.Session.GetString("email") == null)
+            //{
+            //    return RedirectToAction("Login");
+            //}
             var users = dbContext.Users.ToList();
             return View(users);
         }
