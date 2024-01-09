@@ -89,5 +89,22 @@ namespace SessionInNetCore.Controllers
             return View(users);
         }
 
+        public IActionResult CheckBox()
+        {
+            var model = new CheckBoxModel()
+            {
+                IsChecked = false,
+                Text = "Accept terms and condition"
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult CheckBox(CheckBoxModel data)
+        {
+            var value = data.IsChecked;
+            data.Text = "Check this check box";
+            ViewData["data"] = value;
+            return View(data);
+        }
     }
 }
