@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SchoolViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +8,63 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@{
+    if (Model.Students != null)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Std</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model.Students)
+                    {
+                        <tr>
+                            <th>@item.Id</th>
+                            <th>@item.Name</th>
+                            <th>@item.Std</th>
+                            <th>@item.email</th>
+                        </tr>
+                    }
+                }
+            </tbody>
+
+        </table>
+    }
+}
+@{
+    if (Model.Teachers != null)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Std</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model.Teachers)
+                    {
+                        <tr>
+                            <th>@item.Id</th>
+                            <th>@item.Name</th>
+                            <th>@item.Description</th>
+                            <th>@item.Gender</th>
+                        </tr>
+                    }
+                }
+            </tbody>
+
+        </table>
+    }
+
+}
