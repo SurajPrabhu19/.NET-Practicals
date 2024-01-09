@@ -1,0 +1,17 @@
+﻿@model SchoolViewModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    foreach (var item in Model.Students)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" asp-append-version="true" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">@item.email</p>
+            </div>
+        </div>
+    }
+}
