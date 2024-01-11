@@ -23,5 +23,13 @@ var app = builder.Build();
 app.MapControllers();
 
 //---------------------------------------------------------------------------------------------
+// ENDPOINT based ROUTING: -------------------------------------------------------------------
+app.UseEndpoints(endpoints =>
+{
+    endpoints.Map("map1", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1"); });
+    endpoints.Map("map2", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2"); });
+});
+
+//---------------------------------------------------------------------------------------------
 
 app.Run();
