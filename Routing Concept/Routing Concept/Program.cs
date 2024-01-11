@@ -28,6 +28,8 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.Map("map1", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1"); });
     endpoints.Map("map2", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2"); });
+    endpoints.MapGet("map1get", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1Get"); });
+    endpoints.MapPost("map2post", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2post"); });
 });
 
 //---------------------------------------------------------------------------------------------
