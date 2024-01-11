@@ -3,8 +3,9 @@ using NET6_Middlewares.CustomMiddlewares;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
 
+
+//------------------------------ CUSTOM Middlewares ---------------------------------
 app.Use(async (HttpContext context, RequestDelegate next) =>
 {
     await context.Response.WriteAsync("Started Use 1\n");
@@ -12,6 +13,22 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await context.Response.WriteAsync("Completed Use 1\n");
 });
 // Use() -> this extension is used to add middleware extension that may or may not forward request to the next middleware
+
+app.UseWhen(
+    context =>
+    {
+        // condition is first evaluated -> if true then below middleware is implemented
+        if (context.Request.Query.ContainsKey("logout")) return true;
+        else return false;
+
+    },
+    app =>
+    {
+        app.Run(async (HttpContext context) =>
+        {
+            await context.Response.WriteAsync("Logging Out\n");
+        });
+    });
 
 app.Use(async (context, next) =>
 {
