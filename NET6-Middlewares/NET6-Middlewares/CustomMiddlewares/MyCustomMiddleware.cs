@@ -10,7 +10,6 @@ namespace NET6_Middlewares.CustomMiddlewares
             await context.Response.WriteAsync("Started MyCustomMiddleware\n");
             await next(context);
             await context.Response.WriteAsync("Completed MyCustomMiddleware\n");
-            throw new NotImplementedException();
         }
     }
 
