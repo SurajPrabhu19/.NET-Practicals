@@ -24,6 +24,7 @@ app.MapControllers();
 
 //---------------------------------------------------------------------------------------------
 // ENDPOINT based ROUTING: -------------------------------------------------------------------
+app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     endpoints.Map("map1", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1"); });
