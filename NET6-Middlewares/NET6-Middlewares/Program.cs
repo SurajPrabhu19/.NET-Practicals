@@ -20,6 +20,7 @@ app.Use(async (context, next) =>
     await context.Response.WriteAsync("Completed Use 2\n");
 });
 
+app.UseMiddleware<MyCustomMiddleware>();    // adding custom middleware
 
 app.Run(async (context) =>
 {
