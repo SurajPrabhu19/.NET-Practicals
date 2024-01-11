@@ -13,5 +13,12 @@ namespace NET6_Middlewares.CustomMiddlewares
         }
     }
 
+    public static class MyCustomMiddlewareExtension
+    {
+        public static IApplicationBuilder UseMyCustomMiddleware(this IApplicationBuilder app)
+        {
+            return app.UseMiddleware<MyCustomMiddleware>();
+        }
+    }
 
 }
