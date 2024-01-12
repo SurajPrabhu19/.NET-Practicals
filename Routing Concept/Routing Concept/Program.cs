@@ -57,7 +57,8 @@ app.UseEndpoints(endpoints =>
         {
             await context.Response.WriteAsync("Inside Files folder - default param");
         });
-    endpoints.Map("/files/{filenumber?}",
+    // primitive contstaints involve: int, bool, datetime
+    endpoints.Map("/files/{filenumber:int?}",   
         async (context) =>
         {
             await context.Response.WriteAsync("Inside Files folder - Nullable filenumber");
