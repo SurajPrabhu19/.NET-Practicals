@@ -57,11 +57,17 @@ app.UseEndpoints(endpoints =>
         {
             await context.Response.WriteAsync("Inside Files folder - default param");
         });
-    // primitive contstaints involve: int, bool, datetime
+    // primitive contstaints involve: int, bool, datetime, decimal(-2, 0.02), long, guid(123E54-ABD92-A353) - global universal identifier - 128bit hexa decimal number
     endpoints.Map("/files/{filenumber:int?}",   
         async (context) =>
         {
             await context.Response.WriteAsync("Inside Files folder - Nullable filenumber");
+        });
+    endpoints.Map("/files/{filenumber:guid}",   
+        async (context) =>
+        {
+            Guid guid = Guid.Parse(Convert.ToString(context.Request.RouteValues["filenumber"])!);   ///! indicates value cannot be null
+            await context.Response.WriteAsync($"Inside Files folder - Guid number: {guid}");
         });
 
 });
