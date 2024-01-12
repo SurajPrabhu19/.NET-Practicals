@@ -76,6 +76,8 @@ app.UseEndpoints(endpoints =>
             await context.Response.WriteAsync($"Inside Files folder - Guid number: {guid}");
         });
     //{id:int:range(1,100)} - Range Constraint
+    // {name:alpha} - alphabets only 
+    // {age:regex(^[0-9]{2}$)} - Regex expression constraint - to match 2 digits numbers
 });
 //---------------------------------------------------------------------------------------------
 app.Run(async (context) =>
