@@ -75,7 +75,7 @@ app.UseEndpoints(endpoints =>
             Guid guid = Guid.Parse(Convert.ToString(context.Request.RouteValues["filenumber"])!);   ///! indicates value cannot be null
             await context.Response.WriteAsync($"Inside Files folder - Guid number: {guid}");
         });
-
+    //{id:int:range(1,100)} - Range Constraint
 });
 //---------------------------------------------------------------------------------------------
 app.Run(async (context) =>
