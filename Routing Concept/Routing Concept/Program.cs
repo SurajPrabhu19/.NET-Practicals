@@ -50,17 +50,17 @@ app.UseEndpoints(endpoints =>
     endpoints.Map("/files/{filename}.{extension}",
         async (context) =>
         {
-            await context.Response.WriteAsync("Inside Files folder");
+            await context.Response.WriteAsync("Inside Files folder - filename and extension provided");
         });
     endpoints.Map("/files/{filenumber=1}",
         async (context) =>
         {
-            await context.Response.WriteAsync("Inside Files folder");
+            await context.Response.WriteAsync("Inside Files folder - default param");
         });
     endpoints.Map("/files/{filenumber?}",
         async (context) =>
         {
-            await context.Response.WriteAsync("Inside Files folder");
+            await context.Response.WriteAsync("Inside Files folder - Nullable filenumber");
         });
 
 });
