@@ -19,27 +19,44 @@ var app = builder.Build();
 //    );
 //---------------------------------------------------------------------------------------------
 
-// ATTRIBUTE based ROUTING: -------------------------------------------------------------------
-app.MapControllers();
+//// ATTRIBUTE based ROUTING: -------------------------------------------------------------------
+//app.MapControllers();
 
-//---------------------------------------------------------------------------------------------
-// ENDPOINT based ROUTING: -------------------------------------------------------------------
+////---------------------------------------------------------------------------------------------
+//// ENDPOINT based ROUTING: -------------------------------------------------------------------
+//app.UseRouting();
+//app.Use(async (context, next) =>
+//{
+//    Microsoft.AspNetCore.Http.Endpoint endpoint = context.GetEndpoint();    // this will work only once the UseRouting() is enabled
+//    await context.Response.WriteAsync($"the endpoint displayname is {endpoint.DisplayName}");
+//    await context.Response.WriteAsync($"the endpoint metadata is {endpoint.Metadata}");
+//    await next(context);
+//});
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.Map("map1", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1"); });
+//    endpoints.Map("map2", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2"); });
+//    endpoints.MapGet("map1get", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1Get"); });
+//    endpoints.MapPost("map2post", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2post"); });
+//});
+
+////---------------------------------------------------------------------------------------------
+
+// ENDPOINT based ROUTING: Using Query Param: ---------------------------------------------------
 app.UseRouting();
-app.Use(async (context, next) =>
-{
-    Microsoft.AspNetCore.Http.Endpoint endpoint = context.GetEndpoint();    // this will work only once the UseRouting() is enabled
-    await context.Response.WriteAsync($"the endpoint displayname is {endpoint.DisplayName}");
-    await context.Response.WriteAsync($"the endpoint metadata is {endpoint.Metadata}");
-    await next(context);
-});
+
 app.UseEndpoints(endpoints =>
 {
-    endpoints.Map("map1", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1"); });
-    endpoints.Map("map2", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2"); });
-    endpoints.MapGet("map1get", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map1Get"); });
-    endpoints.MapPost("map2post", async (context) => { await context.Response.WriteAsync("Route for localhost:portNo/map2post"); });
+    endpoints.Map("/files/{filename}.{extension}",
+        async (context) =>
+        {
+            await context.Response.WriteAsync("Inside Files folder");
+        });
+  
 });
-
 //---------------------------------------------------------------------------------------------
+app.Run(async (context) =>
+{
+    await context.Response.WriteAsync($"Request received on {context.Request.Path}");
 
-app.Run();
+});
