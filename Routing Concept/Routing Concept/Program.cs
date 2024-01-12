@@ -52,7 +52,11 @@ app.UseEndpoints(endpoints =>
         {
             await context.Response.WriteAsync("Inside Files folder");
         });
-  
+    endpoints.Map("/files/{filenumber=1}",
+        async (context) =>
+        {
+            await context.Response.WriteAsync("Inside Files folder");
+        });
 });
 //---------------------------------------------------------------------------------------------
 app.Run(async (context) =>
