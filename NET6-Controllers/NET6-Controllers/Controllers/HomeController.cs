@@ -7,6 +7,8 @@ namespace NET6_Controllers.Controllers
     {
         // Attrb based routing:
         [Route("/")]
+        [Route("/Index")]
+        [Route("/Home")]
         public string Index()
         {
             return "New Controller";
