@@ -1,10 +1,16 @@
+using Routing_Concept.CustomRouteConstraint;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); // adding this will make it suitable for MVC
                                             //  Further, if you want Pages features in your MVC application,
                                             //  then you need to use the AddMvc() method.
                                             // REFER: https://dotnettutorials.net/lesson/difference-between-addmvc-and-addmvccore-method/
-
+builder.Services.AddRouting(
+    options =>
+    {
+        options.ConstraintMap.Add("month", typeof(MonthCustomRouteConstraint));
+    });
 var app = builder.Build();
 
 //app.MapGet("/", () => "Hello World!");      // callback function
@@ -58,12 +64,12 @@ app.UseEndpoints(endpoints =>
             await context.Response.WriteAsync("Inside Files folder - default param");
         });
     // primitive contstaints involve: int, bool, datetime, decimal(-2, 0.02), long, guid({5F440509-2E7A-4454-8F4B-E9EB8BA75B09}) - global universal identifier - 128bit hexa decimal number
-    endpoints.Map("/files/{filenumber:int?}",   
+    endpoints.Map("/files/{filenumber:int?}",
         async (context) =>
         {
             await context.Response.WriteAsync("Inside Files folder - Nullable filenumber");
         });
-    endpoints.Map("/files/{filenumber:guid}",   
+    endpoints.Map("/files/{filenumber:guid}",
         async (context) =>
         {
             Guid guid = Guid.Parse(Convert.ToString(context.Request.RouteValues["filenumber"])!);   ///! indicates value cannot be null
