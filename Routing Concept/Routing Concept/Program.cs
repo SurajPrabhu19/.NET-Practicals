@@ -1,8 +1,9 @@
+using Microsoft.Extensions.FileProviders;
 using Routing_Concept.CustomRouteConstraint;
 
 //var builder = WebApplication.CreateBuilder(args);
 var builder = WebApplication.CreateBuilder(
-    new WebApplicationOptions() { WebRootPath = "myroot" }  // This approach targets only one web root
+    new WebApplicationOptions() { WebRootPath = "myroot" }  // This approach targets only one web root + custom web root file configuration
     );
 
 builder.Services.AddControllersWithViews(); // adding this will make it suitable for MVC
@@ -18,6 +19,12 @@ var app = builder.Build();
 
 app.UseStaticFiles(); // NOTE: if using 2 static folders -> current command will point to myroot
 app.UseStaticFiles(); // this will point to wwwroot folder
+
+// if you want to specify another web root folder and want the app to consider it too:
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "myroot2"))
+});
 
 //app.MapGet("/", () => "Hello World!");      // callback function
 
