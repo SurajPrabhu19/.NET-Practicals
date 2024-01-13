@@ -2,7 +2,7 @@ using Routing_Concept.CustomRouteConstraint;
 
 //var builder = WebApplication.CreateBuilder(args);
 var builder = WebApplication.CreateBuilder(
-    new WebApplicationOptions() { WebRootPath = "myroot" }
+    new WebApplicationOptions() { WebRootPath = "myroot" }  // This approach targets only one web root
     );
 
 builder.Services.AddControllersWithViews(); // adding this will make it suitable for MVC
@@ -16,7 +16,8 @@ builder.Services.AddRouting(
     });
 var app = builder.Build();
 
-app.UseStaticFiles();
+app.UseStaticFiles(); // NOTE: if using 2 static folders -> current command will point to myroot
+app.UseStaticFiles(); // this will point to wwwroot folder
 
 //app.MapGet("/", () => "Hello World!");      // callback function
 
