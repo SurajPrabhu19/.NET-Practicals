@@ -1,6 +1,9 @@
 using Routing_Concept.CustomRouteConstraint;
 
-var builder = WebApplication.CreateBuilder(args);
+//var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(
+    new WebApplicationOptions() { WebRootPath = "myroot" }
+    );
 
 builder.Services.AddControllersWithViews(); // adding this will make it suitable for MVC
                                             //  Further, if you want Pages features in your MVC application,
