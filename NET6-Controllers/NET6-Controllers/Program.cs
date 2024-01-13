@@ -7,11 +7,14 @@ builder.Services.AddControllers(); // this service adds/registers all controller
 
 var app = builder.Build();
 
-app.UseRouting();               // enables routing to the requested endpoint
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers(); // maps all request to action_methods in the controller
-});
+//app.UseRouting();               // enables routing to the requested endpoint
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllers(); // maps all request to action_methods in the controller
+//});
+
+// Instead use below to bind requested Url to Actions in Controller:
+app.MapControllers();
 
 app.MapGet("/", () => "Hello World!");
 
