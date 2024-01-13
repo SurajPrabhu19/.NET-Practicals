@@ -16,6 +16,8 @@ builder.Services.AddRouting(
     });
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 //app.MapGet("/", () => "Hello World!");      // callback function
 
 // CONVENTION based ROUTING: ------------------------------------------------------------------
@@ -89,6 +91,8 @@ app.UseEndpoints(endpoints =>
     // {age:regex(^[0-9]{2}$)} - Regex expression constraint - to match 2 digits numbers
 });
 //---------------------------------------------------------------------------------------------
+
+
 app.Run(async (context) =>
 {
     await context.Response.WriteAsync($"Request received on {context.Request.Path}");
