@@ -29,7 +29,24 @@ namespace NET6_Controllers.Controllers
         public ContentResult ReturnContentResult()
         {
             //return new ContentResult() { Content = "Inside ReturnContentResult() - way1", ContentType = "text/json" };
-            return Content("Inside ReturnContentResult() - way2", "text/json");
+            return Content("Inside ReturnContentResult() - way2", "text/json"); // works if class inherits controller
         }
     }
 }
+// To return Json Object:
+/*
+ * return new JsonResult(obj);
+ * return Json(obj); - if class inherits Mvc.Controller 
+ */
+
+// File Result:
+/*
+ * return new VirtualFileResult("file relative path","content-type"); - use when file is inside static web root folder - works only with web root folder
+ * return File("file relative path","content-type");
+ * 
+ * return new PhysicalFileResult("file absolute path","content-type"); - works inside and outside webroot folder
+ * return PhysicalFile("file relative path","content-type");
+ * 
+ * return new FileContentResult("byte-array","content-type");
+ * return File(byte-array","content-type"); - byte[] bytes = System.IO.File.ReadAllBytes(@"c:\aspnetcore\sample.pdf")
+ */
