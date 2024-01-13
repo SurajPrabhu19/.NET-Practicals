@@ -62,8 +62,10 @@ app.UseStaticFiles(new StaticFileOptions()
 ////---------------------------------------------------------------------------------------------
 
 // ENDPOINT based ROUTING: Using Query Param: ---------------------------------------------------
-app.UseRouting();
+app.UseRouting(); // enables routing and selects an appropriate end point based on the URL path and HTTP method.
 
+
+// executes the appropriate routing endpoint based on the endpoint selected by the above UseRouting() method.
 app.UseEndpoints(endpoints =>
 {
     endpoints.Map("/files/{filename}.{extension}",
