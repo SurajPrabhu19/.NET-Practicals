@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ModelBinding_Validation.Models
 {
@@ -6,6 +7,7 @@ namespace ModelBinding_Validation.Models
     {
         public int id { get; set; }
         [Required]
+        [NotNull]
         public string? name { get; set; }
         [Required]
         public string? email { get; set; }
