@@ -5,6 +5,7 @@ namespace ModelBinding_Validation.Controllers
     [Route("[controller]/[action]")]
     public class HomeController : Controller
     {
+        [Route("{id?}/{isLoggedIn?}")]
         public IActionResult Index(int? id, bool? isLoggedIn=false)
         {
             if(id.HasValue == false)
