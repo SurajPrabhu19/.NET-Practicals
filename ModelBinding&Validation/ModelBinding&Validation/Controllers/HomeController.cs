@@ -4,7 +4,7 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace ModelBinding_Validation.Controllers
 {
-    
+
     [Route("/")]
     //[Route("[controller]/[action]")]
     public class HomeController : Controller
@@ -13,9 +13,9 @@ namespace ModelBinding_Validation.Controllers
         [Route("{id?}/{isLoggedIn?}")]
         //public IActionResult Index([FromRoute]int? id, [FromRoute]bool? isLoggedIn=false)
         //public IActionResult Index([FromQuery]int? id, [FromQuery]bool? isLoggedIn=false)
-        public IActionResult Index(Employee emp, int? id, bool? isLoggedIn=false)
+        public IActionResult Index(Employee emp, int? id, bool? isLoggedIn = false)
         {
-            if(id.HasValue == false && emp.id == 0)
+            if (id.HasValue == false && emp.id == 0)
                 return BadRequest("Id is Null -> Please pass some Id value");
 
             if (isLoggedIn == false && emp.isLoggedIn == false)
@@ -33,7 +33,6 @@ namespace ModelBinding_Validation.Controllers
          * 2. Request Body - mostly JSON 
          * 3. Route Data e.g port/{id}/{isloggedin}
          * 4. Query String data e.g port?id=10&isloggedin=true
-         * 
-         * 
+         */
     }
 }
