@@ -27,5 +27,13 @@ namespace ModelBinding_Validation.Controllers
         // FORM Fields: 
         // POST -> param in x-www-form-urlencoder >>> param passed as Route data - prefer when param count ~= 6 
         // POST -> param in multipart form-data >>> param passed as Route data - prefer for complex data + params >= 10 + send files
+
+        // ORDER OF Data params passed in Model Binding:
+        /* 1. Form fields - Multipart-form-data OR urlencoder-data
+         * 2. Request Body - mostly JSON 
+         * 3. Route Data e.g port/{id}/{isloggedin}
+         * 4. Query String data e.g port?id=10&isloggedin=true
+         * 
+         * 
     }
 }
