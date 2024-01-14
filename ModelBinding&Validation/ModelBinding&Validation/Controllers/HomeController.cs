@@ -6,7 +6,7 @@ namespace ModelBinding_Validation.Controllers
     public class HomeController : Controller
     {
         [Route("{id?}/{isLoggedIn?}")]
-        public IActionResult Index(int? id, bool? isLoggedIn=false)
+        public IActionResult Index([FromRoute]int? id, [FromRoute]bool? isLoggedIn=false)
         {
             if(id.HasValue == false)
                 return BadRequest("Id is Null -> Please pass some Id value");
