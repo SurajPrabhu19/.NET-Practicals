@@ -6,10 +6,10 @@ namespace ModelBinding_Validation.Models
     public class Employee
     {
         public int id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "We prefer having a name for an Employee")]
         [NotNull]
         public string? name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Requesting you to enter the email details")]
         public string? email { get; set; }
         public bool? isLoggedIn { get; set; }
         public string? phoneNo { get; set; }
