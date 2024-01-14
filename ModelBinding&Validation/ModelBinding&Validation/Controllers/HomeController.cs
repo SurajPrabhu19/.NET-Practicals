@@ -23,5 +23,9 @@ namespace ModelBinding_Validation.Controllers
 
             return Content("Index Page");
         }
+
+        // FORM Fields: 
+        // POST -> param in x-www-form-urlencoder >>> param passed as Route data - prefer when param count ~= 6 
+        // POST -> param in multipart form-data >>> param passed as Route data - prefer for complex data + params >= 10 + send files
     }
 }
