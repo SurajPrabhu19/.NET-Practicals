@@ -28,12 +28,16 @@ namespace ModelBinding_Validation.Controllers
         {
             if (!ModelState.IsValid)
             {
-                List<string> errors = new List<string>();
-                foreach(var val in ModelState.Values)
-                {
-                    foreach(var error in val.Errors)
-                        errors.Add(error.ErrorMessage.ToString());
-                }
+                //List<string> errors = new List<string>();
+                //foreach(var val in ModelState.Values)
+                //{
+                //    foreach(var error in val.Errors)
+                //        errors.Add(error.ErrorMessage.ToString());
+                //}
+                List<string> errors = ModelState.Values
+                    .SelectMany(values => values.Errors)
+                    .Select(errors => errors.ErrorMessage)
+                    .ToList();
                 string errorStr = String.Join(", ", errors);
                 return BadRequest(errorStr);
             }
