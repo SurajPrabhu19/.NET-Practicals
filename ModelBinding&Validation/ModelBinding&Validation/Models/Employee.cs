@@ -1,9 +1,13 @@
-﻿namespace ModelBinding_Validation.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ModelBinding_Validation.Models
 {
     public class Employee
     {
         public int id { get; set; }
+        [Required]
         public string? name { get; set; }
+        [Required]
         public string? email { get; set; }
         public bool? isLoggedIn { get; set; }
         public string? phoneNo { get; set; }
