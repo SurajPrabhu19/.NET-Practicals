@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ModelsImplementation",
+    "\\ModelsImplementation\\Models",
+    "\\ModelsImplementation\\Views",
+    "\\ModelsImplementation\\Views\\Home",
+    "\\ModelsImplementation\\Views\\Student"
+  ],
+  "SelectedNode": "\\ModelsImplementation\\Views\\Student\\TagHelperFormOuputDemo.cshtml",
+  "PreviewInSolutionExplorer": false
+}

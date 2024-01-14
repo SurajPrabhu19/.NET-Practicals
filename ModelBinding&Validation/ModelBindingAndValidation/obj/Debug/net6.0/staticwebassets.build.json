@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "4S0RrTUZA0PG1n6hk8d2vEmAHeWM/MLTLdBU60BGcF4=",
+  "Source": "ModelBindingAndValidation",
+  "BasePath": "_content/ModelBindingAndValidation",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ModelBindingAndValidation\\wwwroot",
+      "Source": "ModelBindingAndValidation",
+      "ContentRoot": "E:\\.net\\.NET-Practicals\\ModelBindingAndValidation\\ModelBindingAndValidation\\wwwroot\\",
+      "BasePath": "_content/ModelBindingAndValidation",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

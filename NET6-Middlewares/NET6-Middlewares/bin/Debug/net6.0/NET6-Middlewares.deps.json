@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "NET6-Middlewares/1.0.0": {
+        "runtime": {
+          "NET6-Middlewares.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NET6-Middlewares/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
