@@ -13,7 +13,8 @@ namespace ModelBinding_Validation.CustomValidators
             {
                 DateTime date = Convert.ToDateTime(value);
                 if (date.Year >= 2000 || date.Year < 1985)
-                    return new ValidationResult("Year should be in range 1985 to 1999");
+                    return new ValidationResult(ErrorMessage);
+                    //return new ValidationResult("Year should be in range 1985 to 1999");
                 else
                     return ValidationResult.Success;
             }
