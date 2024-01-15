@@ -40,7 +40,7 @@ namespace ModelBinding_Validation.Models
         {
             if(age.HasValue == false && dob.HasValue == false)
             {
-                yield return new ValidationResult("Please enter both either date of birth or age to proceed");
+                yield return new ValidationResult($"Please enter both either {nameof(dob)} or {nameof(age)} to proceed");
             }
         }
     }
