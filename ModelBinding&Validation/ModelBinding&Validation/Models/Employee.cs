@@ -4,7 +4,7 @@ using ModelBinding_Validation.CustomValidators;
 
 namespace ModelBinding_Validation.Models
 {
-    public class Employee
+    public class Employee : IValidatableObject
     {
         public int id { get; set; }
 
@@ -30,9 +30,18 @@ namespace ModelBinding_Validation.Models
 
         [YearValidator(minYear:1990, maxYear:2000)]
         public DateTime? dob { get; set; }
+        public int? age { get; set; }
         public override string ToString()
         {
             return $"Employee Name: {name}\n Email:{email}\n Phone:{phoneNo } ";
+        }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if(age.HasValue == false && dob.HasValue == false)
+            {
+                yield return new ValidationResult("Please enter both either date of birth or age to proceed");
+            }
         }
     }
 

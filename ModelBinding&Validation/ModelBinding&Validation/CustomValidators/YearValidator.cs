@@ -31,7 +31,7 @@ namespace ModelBinding_Validation.CustomValidators
                 else
                     return ValidationResult.Success;
             }
-            return new ValidationResult("Year cannot be null, please re-enter value less than year 2000");
+            return null; // new ValidationResult("Year cannot be null, please re-enter value less than year 2000");
 
         }
     }
