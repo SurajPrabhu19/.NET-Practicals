@@ -13,7 +13,7 @@ namespace ModelBinding_Validation.Controllers
         [Route("{id?}/{isLoggedIn?}")]
         //public IActionResult Index([FromRoute]int? id, [FromRoute]bool? isLoggedIn=false)
         //public IActionResult Index([FromQuery]int? id, [FromQuery]bool? isLoggedIn=false)
-        public IActionResult Index([Bind(nameof(Employee.name), nameof(Employee.email), nameof(Employee.dob), nameof(Employee.password), nameof(Employee.confirmPassword))]Employee emp, int? id, bool? isLoggedIn = false)
+        public IActionResult Index([FromBody][Bind(nameof(Employee.name), nameof(Employee.email), nameof(Employee.dob), nameof(Employee.password), nameof(Employee.confirmPassword))]Employee emp, int? id, bool? isLoggedIn = false)
         {
             if (id.HasValue == false && emp.id == 0)
                 return BadRequest("Id is Null -> Please pass some Id value");
@@ -24,7 +24,7 @@ namespace ModelBinding_Validation.Controllers
             return Content("Index Page");
         }
         [Route("check")]
-        public IActionResult validateEmployee(Employee emp)
+        public IActionResult validateEmployee([FromBody]Employee emp)
         {
             if (!ModelState.IsValid)
             {
