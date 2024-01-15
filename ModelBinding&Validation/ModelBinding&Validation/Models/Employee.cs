@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using ModelBinding_Validation.CustomValidators;
 
 namespace ModelBinding_Validation.Models
@@ -25,6 +26,8 @@ namespace ModelBinding_Validation.Models
         public string? password { get; set; }
         [Compare(otherProperty: "password", ErrorMessage = "Password doesnt match, please re-enter your password")]
         public string? confirmPassword { get; set; }
+
+        [BindNever]
         [Range(20000, 99999.99, ErrorMessage = "{0} can be between {1} to {2}")] // Only works with Numbers like int, double, etc
         public double? salary { get; set; }
 
