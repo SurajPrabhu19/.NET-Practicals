@@ -26,7 +26,7 @@ namespace ModelBinding_Validation.Models
         public string? confirmPassword { get; set; }
         [Range(20000, 99999.99, ErrorMessage = "{0} can be between ${1} to ${2}")] // Only works with Numbers like int, double, etc
         public double? salary { get; set; }
-
+        public DateTime? dob { get; set; }
         public override string ToString()
         {
             return $"Employee Name: {name}\n Email:{email}\n Phone:{phoneNo } ";
