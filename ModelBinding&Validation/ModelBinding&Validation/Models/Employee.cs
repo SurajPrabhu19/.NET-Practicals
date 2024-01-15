@@ -25,9 +25,10 @@ namespace ModelBinding_Validation.Models
         public string? password { get; set; }
         [Compare(otherProperty: "password", ErrorMessage = "Password doesnt match, please re-enter your password")]
         public string? confirmPassword { get; set; }
-        [Range(20000, 99999.99, ErrorMessage = "{0} can be between ${1} to ${2}")] // Only works with Numbers like int, double, etc
+        [Range(20000, 99999.99, ErrorMessage = "{0} can be between {1} to {2}")] // Only works with Numbers like int, double, etc
         public double? salary { get; set; }
-        [YearValidator(ErrorMessage = "Year should be in range 1985 to 1999")]
+
+        [YearValidator(minYear:1990, maxYear:2000,ErrorMessage = "Date should be in range")]
         public DateTime? dob { get; set; }
         public override string ToString()
         {
