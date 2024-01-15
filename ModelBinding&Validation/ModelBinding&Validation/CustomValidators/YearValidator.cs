@@ -7,8 +7,10 @@ namespace ModelBinding_Validation.CustomValidators
     {
         private int MinYear;
         private int MaxYear;
+        private string defaultErrorMsg = "Date is not in range {0} to {1}";
         public YearValidator() { }
-        public YearValidator(int minYear=1985, int maxYear=2005) {
+        public YearValidator(int minYear = 1985, int maxYear = 2005)
+        {
             MinYear = minYear;
             MaxYear = maxYear;
         }
@@ -19,8 +21,13 @@ namespace ModelBinding_Validation.CustomValidators
             {
                 DateTime date = Convert.ToDateTime(value);
                 if (date.Year > MaxYear || date.Year < MinYear)
-                    return new ValidationResult(ErrorMessage+ $" year range - {MinYear} to {MaxYear}");
-                    //return new ValidationResult("Year should be in range 1985 to 1999");
+                {
+                    //return new ValidationResult(ErrorMessage + $" year range - {MinYear} to {MaxYear}");\i
+                    //if (string.IsNullOrEmpty(ErrorMessage))
+                    //    ErrorMessage = $"Date is not in range {MinYear} to {MaxYear}";
+                    return new ValidationResult(string.Format(ErrorMessage ?? defaultErrorMsg, MinYear, MaxYear));
+                }
+                //return new ValidationResult("Year should be in range 1985 to 1999");
                 else
                     return ValidationResult.Success;
             }

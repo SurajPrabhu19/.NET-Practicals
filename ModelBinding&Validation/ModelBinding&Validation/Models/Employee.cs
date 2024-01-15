@@ -28,7 +28,7 @@ namespace ModelBinding_Validation.Models
         [Range(20000, 99999.99, ErrorMessage = "{0} can be between {1} to {2}")] // Only works with Numbers like int, double, etc
         public double? salary { get; set; }
 
-        [YearValidator(minYear:1990, maxYear:2000,ErrorMessage = "Date should be in range")]
+        [YearValidator(minYear:1990, maxYear:2000)]
         public DateTime? dob { get; set; }
         public override string ToString()
         {
