@@ -35,6 +35,7 @@ namespace ModelBinding_Validation.Models
         [YearValidator(minYear:1990, maxYear:2000)]
         public DateTime? dob { get; set; }
         public int? age { get; set; }
+        public List<string> tags { get; set; } = new List<string>();
         public override string ToString()
         {
             return $"Employee Name: {firstName}\n Email:{email}\n Phone:{phoneNo } ";
