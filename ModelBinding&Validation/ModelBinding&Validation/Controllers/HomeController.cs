@@ -51,9 +51,10 @@ namespace ModelBinding_Validation.Controllers
             return Content($"Employee Object validated - {emp}");
         }
         [Route("check2")]
-        public IActionResult validateEmployee2(Employee emp)
+        public IActionResult validateEmployee2(Employee emp, [FromHeader(Name = "AuthorizationKey")] string authenticationKey)
         {
             var authToken = ControllerContext.HttpContext.Request.Headers["AuthorizationKey"];
+            var authToken2 = authenticationKey;
             if (!ModelState.IsValid)
             {
                 //List<string> errors = new List<string>();
