@@ -14,7 +14,8 @@ namespace ModelBinding_Validation.Models
         [NotNull]
         //[StringLength(maximumLength: 50, MinimumLength = 2, ErrorMessage = "Employee Name should be between 2 to 50 characters")]
         [StringLength(maximumLength: 50, MinimumLength = 2, ErrorMessage = "{0} should be between {2} to {1} characters")]
-        public string? name { get; set; }
+        public string? firstName { get; set; }
+        public string? lastName { get; set; }
         [Required(ErrorMessage = "Requesting you to enter the email details")]
         [EmailAddress(ErrorMessage = " Please enter a valid email address")]
         public string? email { get; set; }
@@ -36,7 +37,7 @@ namespace ModelBinding_Validation.Models
         public int? age { get; set; }
         public override string ToString()
         {
-            return $"Employee Name: {name}\n Email:{email}\n Phone:{phoneNo } ";
+            return $"Employee Name: {firstName}\n Email:{email}\n Phone:{phoneNo } ";
         }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

@@ -1,6 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-builder.Services.AddControllersWithViews().AddXmlSerializerFormatters();
+//builder.Services.AddControllersWithViews().AddXmlSerializerFormatters();
 // u have to add this in case you are passing xml data in request body
 // since aspnetcore has JsonInputFormatter as the default choice
 /*
