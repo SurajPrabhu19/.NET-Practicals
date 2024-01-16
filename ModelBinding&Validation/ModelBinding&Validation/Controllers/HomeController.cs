@@ -45,6 +45,27 @@ namespace ModelBinding_Validation.Controllers
 
             return Content($"Employee Object validated - {emp}");
         }
+        [Route("check2")]
+        public IActionResult validateEmployee2(Employee emp)
+        {
+            if (!ModelState.IsValid)
+            {
+                //List<string> errors = new List<string>();
+                //foreach(var val in ModelState.Values)
+                //{
+                //    foreach(var error in val.Errors)
+                //        errors.Add(error.ErrorMessage.ToString());
+                //}
+                List<string> errors = ModelState.Values
+                    .SelectMany(values => values.Errors)
+                    .Select(errors => errors.ErrorMessage)
+                    .ToList();
+                string errorStr = String.Join(", ", errors);
+                return BadRequest(errorStr);
+            }
+
+            return Content($"Employee Object validated - {emp}");
+        }
         // FORM Fields: 
         // POST -> param in x-www-form-urlencoder >>> param passed as Route data - prefer when param count ~= 6 
         // POST -> param in multipart form-data >>> param passed as Route data - prefer for complex data + params >= 10 + send files
