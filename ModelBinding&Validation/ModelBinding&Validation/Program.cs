@@ -1,6 +1,7 @@
 using ModelBinding_Validation.CustomModelBinder;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews(options =>
 {
     options.ModelBinderProviders.Insert(0, new CustomEmployeeBinderProvider());

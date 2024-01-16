@@ -10,6 +10,11 @@ namespace ModelBinding_Validation.Controllers
     //[Route("[controller]/[action]")]
     public class HomeController : Controller
     {
+        //private readonly HttpContext httpContext;
+        //public HomeController(HttpContext httpContext)
+        //{
+        //    this.httpContext = httpContext;
+        //}
 
         [Route("{id?}/{isLoggedIn?}")]
         //public IActionResult Index([FromRoute]int? id, [FromRoute]bool? isLoggedIn=false)
@@ -48,6 +53,7 @@ namespace ModelBinding_Validation.Controllers
         [Route("check2")]
         public IActionResult validateEmployee2(Employee emp)
         {
+            var authToken = ControllerContext.HttpContext.Request.Headers["AuthorizationKey"];
             if (!ModelState.IsValid)
             {
                 //List<string> errors = new List<string>();
