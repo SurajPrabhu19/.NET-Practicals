@@ -9,7 +9,8 @@
             "Understood MVC Pattern Architecture",
             "View -> Code Blocks and Expressions",
             "If/else , switch, Foreach, Forloop",
-            "Tracking Progress - Views - Literal, Local Functions"
+            "Tracking Progress - Views - Literal, Local Functions",
+            "Tracking Progress - Views - Html.Raw('Javascript in form of String to be executed')",
         };
     }
 }
