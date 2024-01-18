@@ -7,7 +7,8 @@
         {
             "Completed Model Binding and Validations",
             "Understood MVC Pattern Architecture",
-            "View -> Code Blocks and Expressions"
+            "View -> Code Blocks and Expressions",
+            "If/else , switch, Foreach, Forloop"
         };
     }
 }
