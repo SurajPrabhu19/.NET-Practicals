@@ -6,7 +6,8 @@
         string[] progressThatsNotImplemented =
         {
             "Completed Model Binding and Validations",
-            "Understood MVC Pattern Architecture"
+            "Understood MVC Pattern Architecture",
+            "View -> Code Blocks and Expressions"
         };
     }
 }
