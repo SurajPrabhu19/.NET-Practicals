@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hVzAlkEm4+inTorBcaZIaljBbZfxXeu36lrOX7IoFbM=",
+  "Hash": "XCw+SeR8arQm0suhn+XgtW6Y2RUp1Tp3qV9kyUhf5So=",
   "Source": "LayoutViewDemonstration",
   "BasePath": "_content/LayoutViewDemonstration",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Identity": "E:\\.net\\.NET-Practicals\\LayoutViewDemonstration\\LayoutViewDemonstration\\wwwroot\\StyleSheet.css",
+      "SourceId": "LayoutViewDemonstration",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\.net\\.NET-Practicals\\LayoutViewDemonstration\\LayoutViewDemonstration\\wwwroot\\",
+      "BasePath": "_content/LayoutViewDemonstration",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
     },
     {
       "Identity": "E:\\.net\\.NET-Practicals\\LayoutViewDemonstration\\LayoutViewDemonstration\\wwwroot\\twitter-bootstrap\\css\\bootstrap.css",

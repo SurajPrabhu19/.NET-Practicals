@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "E:\\.net\\.NET-Practicals\\LayoutViewDemonstration\\LayoutViewDemonstration\\wwwroot\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
       "Id": "E:\\.net\\.NET-Practicals\\LayoutViewDemonstration\\LayoutViewDemonstration\\wwwroot\\jquery\\jquery.js",
       "PackagePath": "staticwebassets\\jquery\\jquery.js"
     },
