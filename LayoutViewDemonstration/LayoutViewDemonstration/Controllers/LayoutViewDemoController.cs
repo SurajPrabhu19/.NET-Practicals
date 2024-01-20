@@ -4,19 +4,19 @@ namespace LayoutViewDemonstration.Controllers
 {
     public class LayoutViewDemoController : Controller
     {
-        [Route("/")]
+        [Route("/layout")]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Route("/contact")]
+        [Route("/contact-page")]
         public IActionResult Contact()
         {
             return View();
         }
 
-        [Route("/about")]
+        [Route("/about-page")]
         public IActionResult About()
         {
             return View();

@@ -46,8 +46,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWxjb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/LayoutViewDemo/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0Vmlld0RlbW9cQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/LayoutViewDemo/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0Vmlld0RlbW9cQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/LayoutViewDemo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0Vmlld0RlbW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Product/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Product/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Product/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/.net/.NET-Practicals/LayoutViewDemonstration/LayoutViewDemonstration/Views/Shared/BootStrapLayout.cshtml]
