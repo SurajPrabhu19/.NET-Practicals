@@ -1,13 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); // for creating Controller and Service objects
 var app = builder.Build();
 
 app.UseStaticFiles();
-
+app.MapControllers(); // creates route for each Actions in the Controller
 //app.MapControllerRoute(
 //    name: "default", 
 //    pattern: "{controller=Home}/{View=Index}"); //Convention based routing 
 
-app.MapControllers();   // attribute based routing -> add routes in Controllers
+  // attribute based routing -> add routes in Controllers
 
 app.Run();
