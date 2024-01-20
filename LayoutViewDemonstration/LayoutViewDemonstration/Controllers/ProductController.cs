@@ -4,14 +4,17 @@ namespace LayoutViewDemonstration.Controllers
 {
     public class ProductController : Controller
     {
-        public IActionResult Index()
+        [Route("/products")]
+        public IActionResult Products()
         {
             return View();
         }
-        public IActionResult Order()
+        [Route("/orders")]
+        public IActionResult Orders()
         {
             return View();
         }
+        [Route("/search")]
         public IActionResult Search()
         {
             return View();
