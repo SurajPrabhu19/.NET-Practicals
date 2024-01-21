@@ -4,6 +4,10 @@
 @{
     ViewData["Title"] = "Contact us";
     ViewData["Temp"] = "Temp Data";
+
+    var myViewDictionary = new ViewDataDictionary(ViewData);
+    myViewDictionary["Title"] = "Partial View + Contact us";
+    myViewDictionary["Temp"] = "Updated Temp data";
 }
 <h1>Contact Us</h1>
 
@@ -14,7 +18,7 @@
 <h2>
     Using partial Tag helper
 </h2>
-<partial name="_DemoPartialView" />
+<partial name="_DemoPartialView" view-data="myViewDictionary"/>
 <h2>Using Html.PartialAsync</h2>
 @await Html.PartialAsync("_DemoPartialView")
 <h2>Using Html.RenderPartialAsync - always inside a razor block</h2>
