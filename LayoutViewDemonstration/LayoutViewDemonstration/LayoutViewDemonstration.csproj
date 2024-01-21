@@ -19,4 +19,8 @@
     <None Include="wwwroot\jquery\jquery.slim.min.map" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Shared\PartialViews\" />
+  </ItemGroup>
+
 </Project>
