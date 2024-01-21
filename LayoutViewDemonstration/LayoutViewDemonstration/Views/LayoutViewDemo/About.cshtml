@@ -3,6 +3,12 @@
 *@
 @{
     ViewData["Title"] = "About us";
+
+    Employee emp = new Employee()
+            {
+                id = 1,
+                name = "Suraj"
+            };
 }
 
 <p>About Page</p>
@@ -10,3 +16,5 @@
 @section footer_section{
     <p>About Us Footer</p>
 }
+
+<partial name="_EmployeePartialView" model="emp"></partial>
