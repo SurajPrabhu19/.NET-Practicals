@@ -1,0 +1,24 @@
+﻿<div class="header">User Details</div>
+<div class="box">
+
+    <table class="table w-100 text-center">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Designation</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in ViewBag.model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Designation</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
