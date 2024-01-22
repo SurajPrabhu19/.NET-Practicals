@@ -3,11 +3,22 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>ASP.NET Core - View Component Demo</title>
     <link rel="stylesheet" href="StyleSheet.css"/>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">ASP.NET Core</div>
+            <div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         @RenderBody()
     </div>
 </body>
