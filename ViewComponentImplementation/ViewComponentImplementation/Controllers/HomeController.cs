@@ -24,9 +24,9 @@ namespace ViewComponentImplementation.Controllers
                 new PersonModel(){Name = "Suraj", Designation="Sr. SWE"},
                 new PersonModel(){Name = "Nitin", Designation="SDE-2"}
             };
-            ViewData["model"] = personModelList;
+            //ViewData["model"] = personModelList;
 
-            return View("PersonDetails");
+            return View("PersonDetails", model:personModelList);
         }
 
 
