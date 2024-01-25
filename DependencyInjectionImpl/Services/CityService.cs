@@ -1,6 +1,6 @@
 ﻿namespace Services
 {
-    public class CityService
+    public class CityService: ICityService
     {
         private List<string> _cities;
         public CityService() { 
