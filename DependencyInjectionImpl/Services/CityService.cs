@@ -1,4 +1,6 @@
-﻿namespace Services
+﻿using ServicesContracts;
+
+namespace Services
 {
     public class CityService: ICityService
     {
