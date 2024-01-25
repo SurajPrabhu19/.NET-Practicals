@@ -10,6 +10,7 @@ namespace DependencyInjectionImpl.Controllers
         {
             _cityService = new CityService();
         }
+        [Route("/")]
         public IActionResult Index()
         {
             var cities = _cityService.getCities();
