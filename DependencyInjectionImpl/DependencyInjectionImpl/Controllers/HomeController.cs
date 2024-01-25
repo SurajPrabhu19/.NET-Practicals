@@ -1,12 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Services;
 
 namespace DependencyInjectionImpl.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly CityService _cityService;
+        public HomeController()
+        {
+            _cityService = new CityService();
+        }
         public IActionResult Index()
         {
-            return View();
+            var cities = _cityService.getCities();
+            return View(cities);
         }
     }
 }

@@ -1,7 +1,15 @@
-﻿
+﻿@model IEnumerable<string>
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Cities</h1>
+<ul class="list">
+    @foreach (var city in Model)
+    {
+        <li>city</li>
+    }
+</ul>
+</ul>
+
 
