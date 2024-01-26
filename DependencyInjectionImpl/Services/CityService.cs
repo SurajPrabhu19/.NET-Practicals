@@ -2,7 +2,7 @@
 
 namespace Services
 {
-    public class CityService: ICityService
+    public class CityService: ICityService, IDisposable
     {
         private List<string> _cities;
         private Guid uniqueId;
@@ -12,6 +12,11 @@ namespace Services
             {
                 "Mumbai", "Kolkata", "Delhi", "Banglore"
             };
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
 
         public List<string> getCities()
