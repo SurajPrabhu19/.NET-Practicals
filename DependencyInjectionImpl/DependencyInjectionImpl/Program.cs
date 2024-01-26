@@ -6,8 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // DIP -> Dependency Inversion Principle -> 2 classes shud be linked to each other by Interface
 // DI -> Injecting or creating dependency of other service automatically
 builder.Services.AddControllersWithViews();
-builder.Services.Add(new ServiceDescriptor(
-    typeof(ICityService), typeof(CityService), ServiceLifetime.Transient));
+//builder.Services.Add(new ServiceDescriptor(
+//    typeof(ICityService), typeof(CityService), ServiceLifetime.Transient));
+builder.Services.Add(new ServiceDescriptor(typeof(ICityService), typeof(CityService), ServiceLifetime.Scoped)); // adding a service with scoped service lifetime
 var app = builder.Build();
 
 
