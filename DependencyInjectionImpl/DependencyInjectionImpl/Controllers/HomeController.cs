@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Autofac;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Services;
 using ServicesContracts;
@@ -11,8 +12,10 @@ namespace DependencyInjectionImpl.Controllers
         private readonly ICityService _cityService2;
         private readonly ICityService _cityService3;
         private readonly IServiceScopeFactory _serviceScopeFactory;
-        public HomeController(ICityService cityService1, ICityService cityService2, ICityService cityService3, IServiceScopeFactory serviceScopeFactory)
+        private readonly ILifetimeScope _lifetimeScope;
+        public HomeController(ILifetimeScope lifetimeScope,ICityService cityService1, ICityService cityService2, ICityService cityService3, IServiceScopeFactory serviceScopeFactory)
         {
+            _lifetimeScope = lifetimeScope;
             _cityService1 = cityService1;
             _cityService2 = cityService2;
             _cityService3 = cityService3;
@@ -33,6 +36,19 @@ namespace DependencyInjectionImpl.Controllers
                 ViewBag.guid4 = service.getUniqueId();
             }
             // the city service will automatically call the dispose()
+            return View(cities);
+        }
+
+        [Route("/autofac")]
+        public IActionResult AutofacIocContainer()
+        {
+            List<string> cities = new List<string>();
+            using(ILifetimeScope scope = _lifetimeScope.BeginLifetimeScope())
+            {
+                ICityService cityServiceUsingAutofac = scope.Resolve<ICityService>();
+                cities = cityServiceUsingAutofac.getCities();
+                ViewBag.guidForAutoFacServiceObj = cityServiceUsingAutofac.getUniqueId();
+            }   
             return View(cities);
         }
     }

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "AutofacIocContainer";
+}
+
+<h1>AutofacIocContainer</h1>
+<div class="container">@ViewBag.guidForAutoFacServiceObj </div>
+<br />
+@foreach(var city in Model)
+{
+    <li>@city</li>
+}
+
