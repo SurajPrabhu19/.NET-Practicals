@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Service Provider Factory is a representation for default IOC Container
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());    // successfully changing from default to AutoFac IOC Container
 
-// only for user defined services
+// adding services to Autofac container -> only for user defined services
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => { 
     containerBuilder.RegisterType<CityService>().As<ICityService>().InstancePerDependency();       // adding Transient Service
 });
