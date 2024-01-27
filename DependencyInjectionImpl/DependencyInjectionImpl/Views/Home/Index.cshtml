@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<string>
-@inject ICityService cityServiceInView
+@* @inject ICityService cityServiceInView *@
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Cities</h1>
-@{
+@* @{
     var cityListUsingInject = cityServiceInView.getCities();
     foreach (var city in cityListUsingInject)
     {
         <li>@city</li>
     }
-}
+} *@
 <ul class="list">
     @foreach (var city in Model)
     {
