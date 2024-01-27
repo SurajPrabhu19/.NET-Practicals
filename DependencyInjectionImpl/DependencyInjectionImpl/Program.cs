@@ -1,3 +1,4 @@
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Services;
 using ServicesContracts;
@@ -7,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Service Provider Factory is a representation for IOC Factory
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());    // successfully changing from default to AutoFac IOC Container
+
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => { 
+    containerBuilder.RegisterType<CityService>().As<ICityService>().InstancePerDependency();       // adding Transient Service
+});
 
 // IOC -> builder.Services -> add a service in the IOC (Inversion Of Control) Container
 // DIP -> Dependency Inversion Principle -> 2 classes shud be linked to each other by Interface
