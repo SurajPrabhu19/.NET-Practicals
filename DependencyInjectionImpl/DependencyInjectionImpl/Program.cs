@@ -8,7 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //builder.Services.Add(new ServiceDescriptor(
 //    typeof(ICityService), typeof(CityService), ServiceLifetime.Transient));
-builder.Services.Add(new ServiceDescriptor(typeof(ICityService), typeof(CityService), ServiceLifetime.Scoped)); // adding a service with scoped service lifetime
+//builder.Services.Add(new ServiceDescriptor(typeof(ICityService), typeof(CityService), ServiceLifetime.Scoped)); // adding a service with scoped service lifetime
+builder.Services.AddTransient<ICityService, CityService>();
+builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddSingleton<ICityService, CityService>();
 var app = builder.Build();
 
 

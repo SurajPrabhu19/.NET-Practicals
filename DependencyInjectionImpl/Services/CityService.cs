@@ -16,7 +16,7 @@ namespace Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            
         }
 
         public List<string> getCities()
