@@ -8,3 +8,9 @@
 
 <h1>@title</h1>
 <div class="box">@ViewBag.EnvironmentName</div>
+<environment include=@ViewBag.EnvironmentName>
+    <button class="button button-blue-back">This is a button for @ViewBag.EnvironmentName Env</button>
+</environment>
+<environment exclude="Staging">
+    <button class="button button-green-back">This is a button for @ViewBag.EnvironmentName Env</button>
+</environment>
