@@ -6,7 +6,7 @@ var app = builder.Build();
 
 if(!app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    app.UseDeveloperExceptionPage();    // displaying Exception page only for development env
 }
 
 app.UseStaticFiles();
