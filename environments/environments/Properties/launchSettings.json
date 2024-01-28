@@ -16,7 +16,7 @@
       "environmentVariables": {
         //"ASPNETCORE_ENVIRONMENT": "Staging"
         // OR
-        "DOTNET_ENVIRONMENT":  "Development"
+        "DOTNET_ENVIRONMENT": "Staging"
       }
     },
     "IIS Express": {
@@ -28,3 +28,8 @@
     }
   }
 }
+
+// RUN APP via POWER SHELL:
+// use "dotnet run" to run the application without VStudio
+// if you want to skip the environment config ->  "dotnet run --no-launch-profile"
+// if you want to run your app on a specific env e.g Development -> 1. '$Env:ASPNETCORE_ENVIRONMENT="Development"' OR 'set ASPNETCORE_ENVIRONMENT="Development"' 2. "dotnet run --no-launch-profile"
