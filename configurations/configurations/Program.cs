@@ -4,6 +4,7 @@ var app = builder.Build();
 
 //app.MapGet("/", () => "Hello World!");
 
+app.UseStaticFiles();
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
@@ -13,7 +14,8 @@ app.UseEndpoints(endpoints =>
         await context.Response.WriteAsync(app.Configuration.GetValue<string>("MyKey") + "\n");     // way 2 to get value from appsetting.json // line 2 added
         // not working //await context.Response.WriteAsync(app.Configuration.GetValue<string>("MyKey1"));     // way 2 to get value from appsetting.json
         await context.Response.WriteAsync(app.Configuration.GetValue<string>("MyKey2", "Key Not Found -> this is a default value sustituted")+"\n");     // way 2 to get value from appsetting.json // line 3 added
+    
     });
 });
-
+app.MapControllers();
 app.Run();

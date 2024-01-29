@@ -1,14 +1,21 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>HomePage</title>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="~/StyleSheet.css"/>
-    </head>
-    <body>
+<head>
+    <title>HomePage</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Home</h1>
+
         <div class="box">
             <div>@ViewBag.MyKey</div>
             <div>@ViewBag.RandomKey</div>
+            <div>@ViewBag.MyAppClientId</div>
+            <div>@ViewBag.MyAppClientSecret</div>
+            <div>@ViewBag.MyAppProdEnv</div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
