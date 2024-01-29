@@ -29,7 +29,9 @@ namespace configurations.Controllers
 
             // Way 3: to get data from Json section -> using Options pattern
             MyAppDataOptions options1 = _configuration.GetSection("MyAppData2").Get<MyAppDataOptions>();    // using .Get<OptionsClass>()
-
+            
+            MyAppDataOptions options2 = new MyAppDataOptions(); // using .Bind(OptionsClass Object)
+            _configuration.GetSection("MyAppData2").Bind(options2);
 
 
             return View();
