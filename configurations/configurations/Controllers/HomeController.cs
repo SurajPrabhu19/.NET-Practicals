@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using configurations.Options;
+using Microsoft.AspNetCore.Mvc;
 
 namespace configurations.Controllers
 {
@@ -25,6 +26,11 @@ namespace configurations.Controllers
             ViewBag.MyAppClientId = MyAppSection["client-id"];
             ViewBag.MyAppClientSecret = MyAppSection["client-secret"];
             ViewBag.MyAppProdEnv = MyAppSection["environments:prod"];
+
+            // Way 3: to get data from Json section -> using Options pattern
+            MyAppDataOptions options1 = _configuration.GetSection("MyAppData2").Get<MyAppDataOptions>();    // using .Get<OptionsClass>()
+
+
 
             return View();
         }
