@@ -1,5 +1,11 @@
+using configurations.Options;
+
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllersWithViews();
+// Stores an object of MyAppDataOptions type with data prefilled from the appsetting.json section
+builder.Services.Configure<MyAppDataOptions>(builder.Configuration.GetSection("MyAppData2"));
+
 var app = builder.Build();
 
 //app.MapGet("/", () => "Hello World!");

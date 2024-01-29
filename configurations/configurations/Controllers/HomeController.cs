@@ -6,10 +6,12 @@ namespace configurations.Controllers
     public class HomeController : Controller
     {
         private readonly IConfiguration _configuration;
+        private readonly MyAppDataOptions _myAppDataOptions;
 
-        public HomeController(IConfiguration configuration)
+        public HomeController(IConfiguration configuration, MyAppDataOptions myAppDataOptions)
         {
             _configuration = configuration;
+            _myAppDataOptions = myAppDataOptions;
         }
         [Route("/config1")]
         public IActionResult Index()
@@ -32,6 +34,10 @@ namespace configurations.Controllers
             
             MyAppDataOptions options2 = new MyAppDataOptions(); // using .Bind(OptionsClass Object)
             _configuration.GetSection("MyAppData2").Bind(options2);
+
+            // Way 4: to get data from Json section -> using Options pattern + Dependency Injection
+            MyAppDataOptions options3 = _myAppDataOptions;
+
 
 
             return View();
