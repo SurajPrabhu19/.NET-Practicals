@@ -18,6 +18,10 @@
                     Method = HttpMethod.Get,
                 };
                 HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage);
+
+                Stream stream = await responseMessage.Content.ReadAsStreamAsync();
+                StreamReader streamReader = new StreamReader(stream);
+                string responseBody = await streamReader.ReadToEndAsync();
             }
         }
     }
