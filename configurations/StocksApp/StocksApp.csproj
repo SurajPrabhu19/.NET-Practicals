@@ -6,16 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Notes.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Notes.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Shared\" />
-  </ItemGroup>
-
 </Project>

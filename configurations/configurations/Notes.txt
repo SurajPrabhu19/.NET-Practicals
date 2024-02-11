@@ -1,0 +1,4 @@
+Http Client:
+- used to send http request to a resource (using its URL) and recieving the response from the same.
+-  e.g making request to a third party resource like ChatGpt.
+- Here the server code (C#) acts as a client.

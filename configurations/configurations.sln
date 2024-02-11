@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "configurations", "configurations\configurations.csproj", "{5341EBFF-6B54-41F1-8826-05EB3D796F6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "configurations", "configurations\configurations.csproj", "{5341EBFF-6B54-41F1-8826-05EB3D796F6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksApp", "StocksApp\StocksApp.csproj", "{88C95043-2BA2-4B07-A3AF-4178DA22D9BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5341EBFF-6B54-41F1-8826-05EB3D796F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5341EBFF-6B54-41F1-8826-05EB3D796F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5341EBFF-6B54-41F1-8826-05EB3D796F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C95043-2BA2-4B07-A3AF-4178DA22D9BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C95043-2BA2-4B07-A3AF-4178DA22D9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C95043-2BA2-4B07-A3AF-4178DA22D9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C95043-2BA2-4B07-A3AF-4178DA22D9BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
