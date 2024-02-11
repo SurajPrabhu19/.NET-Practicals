@@ -16,5 +16,7 @@ namespace StocksApp.Controllers
             await _stockService.Method();
             return View();
         }
+
+
     }
 }
