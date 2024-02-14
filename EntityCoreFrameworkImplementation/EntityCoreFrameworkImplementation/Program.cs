@@ -1,4 +1,5 @@
 using EntityCoreFrameworkImplementation.Models;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
